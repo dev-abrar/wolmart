@@ -1,0 +1,1097 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*  ==========================================================================
+                Banner with Sidebar Filter Category Part Start Here
+============================================================================= */
+#filter_category {
+
+    .container,
+    .container-fluid {
+        .row {
+            .col-lg-3 {
+
+                .cat_left_part {
+                    .filter_left_head {
+                        margin-top: 38px;
+
+                        h4 {
+                            @include fs($h, 1.1em, 600, $ff1);
+                        }
+
+                        a {
+                            @include fs($h, 1em, 400, $ff1);
+                        }
+                    }
+
+                    .all_category_wrapper {
+
+                        margin-top: 20px;
+
+                        .widget_titles {
+                            padding-top: 15px;
+                            padding-bottom: 16px;
+                            border-bottom: 2px solid $line;
+                            cursor: pointer;
+
+                            #wid_head {
+                                @include fs($h, 1.1em, 600, $ff1);
+
+
+                                position: relative;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -17px;
+                                    width: 100%;
+                                    height: 3px;
+                                    background: $h;
+                                }
+                            }
+
+                            #wid_dash,
+                            #wid_dash1,
+                            #wid_dash2,
+                            #wid_dash3,
+                            #wid_dash4 {
+                                font-size: 18px;
+                                color: $p;
+                                font-weight: 100;
+                            }
+
+
+                        }
+
+                        #category_list,
+                        #category_list1,
+                        #category_list2,
+                        #category_list3,
+                        #category_list4 {
+                            padding-top: 20px;
+                            transition: all linear 0.3s;
+
+                            #checkbox_top {
+                                margin-top: 15px;
+                            }
+
+                            li {
+                                a {
+                                    display: inline;
+                                }
+
+                                div {
+                                    margin-bottom: 18px;
+
+                                    input {
+                                        width: 20px;
+                                        height: 20px;
+                                        cursor: pointer;
+                                        border: 1px solid #ccc;
+
+                                        &:hover {
+                                            border: none;
+                                        }
+                                    }
+
+                                    label {
+                                        @include fs($h, 1em, 400, $ff1);
+                                        margin-left: 10px;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                margin-bottom: 17px;
+
+                                a {
+                                    @include fs($h, 1em, 400, $ff1);
+                                    transition: all linear 0.3s;
+
+                                    &:hover {
+                                        color: $bl_hov;
+                                    }
+                                }
+
+                                .range {
+                                    margin-top: 25px;
+
+                                    input {
+                                        width: 70px;
+                                        height: 45px;
+                                        text-align: center;
+                                        border: 1px solid #ccc;
+                                        border-radius: 7px;
+                                        @include fs($p, 0.99em, 400, $ff1);
+                                    }
+
+                                    span {
+                                        color: $p;
+                                        margin: 0 6px;
+                                    }
+
+                                    button {
+                                        padding: 0;
+                                        width: 70px;
+                                        height: 45px;
+                                        margin-left: 13px;
+                                        background: $bl_hov;
+                                        border-radius: 7px;
+                                        transition: all linear 0.3s;
+                                        @include fs($wh, 1em, 500, $ff1);
+                                        border: none;
+
+                                        &:hover {
+                                            background: #3C78B4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col-lg-9,
+            .col-lg-12,.col-lg-8 {
+                .cat_right_part {
+                    .filter_main_header {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        
+
+                        .filter_right_head {
+                            column-gap: 20px;
+
+                            form {
+                                border: none;
+
+                                label {
+                                    @include fs($h, 1.04em, 600, $ff1);
+                                }
+
+                                select {
+                                    padding: 8px 0 8px 8px;
+                                    text-align: center;
+                                    width: 155px;
+                                    background: $wh;
+                                    border: 1px solid #D7D7D7;
+                                    @include fs($h, 14px, 400, $ff1);
+                                    cursor: pointer;
+
+                                    option {
+                                        cursor: pointer;
+                                        width: 180px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .filter_right_head_2 {
+                            column-gap: 20px;
+
+                            form {
+                                border: none;
+
+                                label {
+                                    @include fs($h, 1.04em, 600, $ff1);
+                                }
+
+                                select {
+                                    margin-left: 7px;
+                                    padding: 8px 0 8px 8px;
+                                    text-align: center;
+                                    width: 92px;
+                                    background: $wh;
+                                    border: 1px solid #D7D7D7;
+                                    @include fs($h, 14px, 400, $ff1);
+                                    cursor: pointer;
+
+                                    option {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+
+                            .icon1 {
+                                span {
+                                    font-size: 40px;
+                                    cursor: pointer;
+                                    color: $p;
+                                }
+                            }
+
+                            .icon2 {
+                                span {
+                                    font-size: 32px;
+                                    cursor: pointer;
+                                    color: $gray;
+                                    transition: all linear 0.3s;
+
+                                    &:hover {
+                                        color: $p;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .row {
+                        row-gap: 40px !important;
+
+                        .col-lg-4,
+                        .col-lg-2,
+                        .col-lg-3,.col-lg {
+                            .product_item {
+                                &:hover {
+                                    .pro_img {
+                                        .hov_cart_item {
+                                            top: 82%;
+                                            visibility: visible;
+                                            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.08);
+                                        }
+                                    }
+                                }
+
+                                .pro_img {
+                                    overflow: hidden;
+                                    position: relative;
+
+                                    &:hover {
+                                        .img_hov {
+                                            visibility: visible;
+                                        }
+                                    }
+
+                                    .img_hov {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        visibility: hidden;
+                                        transition: $tr;
+                                    }
+
+                                    .hov_cart_item {
+                                        background: $wh;
+                                        visibility: hidden;
+                                        position: absolute;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        top: 86%;
+                                        width: 170px;
+                                        border-radius: 8px;
+
+                                        transition: all linear 0.3s;
+
+                                        ul {
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            justify-content: space-between;
+                                            padding: 10px 23px;
+
+                                            li {
+                                                a {
+                                                    color: $p;
+                                                    font-size: 16px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .pro_details {
+                                    text-align: center;
+
+                                    .jjhhj {
+                                        @include fs($gray, 1em, 500, $ff1);
+                                        text-transform: uppercase;
+                                        margin-top: 16px;
+                                        transition: $tr;
+
+                                        &:hover {
+                                            color: $bl_hov;
+                                        }
+                                    }
+
+                                    .jjhhjj {
+                                        @include fs($h, 1.1em, 500, $ff1);
+                                        margin-top: 1px;
+                                    }
+
+                                    .hhhhh {
+                                        display: block;
+                                    }
+
+                                    h4 {
+                                        @include fs($h, 1.1em, 600, $ff1);
+                                        margin-top: 12px;
+
+                                        span {
+                                            text-decoration: line-through;
+                                            color: $gray !important;
+                                            margin-left: 10px;
+
+                                        }
+                                    }
+
+                                    p {
+                                        margin-top: 6px;
+                                        font-size: 12px;
+                                        color: $star;
+                                        cursor: pointer;
+
+                                        .light1 {
+                                            color: $gray !important;
+                                        }
+
+                                        span {
+                                            font-size: 15px !important;
+                                            margin-left: 10px;
+                                            color: $gray;
+                                            font-family: $ff1;
+                                            font-weight: 500;
+                                            transition: $tr;
+
+                                            &:hover {
+                                                color: $bl_hov;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .right_footer {
+                        border-top: 3px solid $border;
+                        margin-top: 45px;
+                        padding-top: 46px;
+
+                        .row {
+                            .col-lg-4 {
+                                .right_bottom_part {
+
+                                    p {
+                                        @include fs($gray, 1em, 500, $ff1);
+
+                                        span {
+                                            color: $h !important;
+                                            margin-right: 5px;
+                                            margin-left: 5px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .col-lg-8 {
+                                .right_bottom_part_end {
+                                    ul {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: end;
+                                        align-items: center;
+                                        column-gap: 10px;
+                                        padding-right: 5px;
+
+                                        li {
+                                            display: inline;
+
+                                            #prev {
+                                                @include fs($gray, 1em, 500, $ff1);
+
+                                                i {
+                                                    margin-right: 5px;
+                                                }
+                                            }
+
+                                            #start {
+                                                @include fs($bl_hov, 1em, 500, $ff1);
+                                                padding: 10px 15px;
+                                                border: 1px solid $border;
+                                                border-radius: 5px;
+                                            }
+
+                                            #count {
+                                                padding: 10px 14px;
+                                                transition: $tr;
+                                                @include fs($p, 1em, 500, $ff1);
+                                                border: 1px solid $wh;
+                                                border-radius: 5px;
+
+                                                &:hover {
+                                                    border: 1px solid $border;
+                                                    color: $bl_hov;
+                                                }
+                                            }
+
+                                            #next {
+                                                @include fs($p, 1em, 500, $ff1);
+
+                                                i {
+                                                    margin-left: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.accordion-button:not(.collapsed)::after {
+    background-color: $body !important;
+}
+
+.accordion-button:focus {
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: none !important;
+    background-color: $body !important;
+    box-shadow: none !important;
+}
+
+.accordion-button {
+    background-color: transparent;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: none !important;
+}
+
+.dfdfdf {
+    margin-top: 25px;
+}
+
+.pro_details {
+    .full_width_font_size {
+        font-size: 13px !important;
+    }
+
+    .full_width_font_size_tittle {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .full_width_font_size_pera {
+        margin-bottom: 8px !important;
+
+        i {
+            font-size: 10px !important;
+        }
+
+        span {
+            font-size: 10px !important;
+        }
+    }
+
+    .full_width_font_size_price {
+        font-size: 14px !important;
+    }
+}
+
+.banner-img1 {
+    padding: 90px 0 !important;
+}
+
+
+
+.show11{
+    padding: 6px 14px;
+    border:1px solid $bl_hov;
+    transition: all linear 0.3s;
+    color: $bl_hov;
+    cursor: pointer;
+    &:hover{
+        background: $bl_hov;
+        color: $wh;
+        span{
+            color: $wh;
+        }
+    }
+    span{
+        transition: $tr;
+        margin-left: 5px;
+        @include fs($bl_hov, 17px, 500, $ff1);
+
+    }
+}
+
+.beefup__head {
+    @include fs($h !important, 14px, 500 !important, $ff1);
+}
+
+.beefup__head::after {
+    transition: transform 0.2s ease-out;
+    content: "";
+    transform: translate(0, -50%) rotate(45deg);
+    position: absolute;
+    top: 53%;
+    right: 15px;
+    z-index: 0;
+    margin-top: -2px;
+    padding: 3px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    color: $h;
+}
+
+.dropdown__menu {
+    padding: 12px 0 !important;
+}
+
+.dropdown__menu li {
+    font-size: 16px;
+    padding: 5px 30px;
+    -webkit-column-gap: 10px;
+    column-gap: 10px;
+}
+
+.dropdown__menu a {
+    cursor: pointer;
+    display: inline;
+    clear: both;
+    padding: 5px 10px;
+    color: $h;
+    text-decoration: none;
+    white-space: nowrap;
+    background: $body;
+    border-radius: 5px;
+    font-weight: 400;
+    font-family: $ff1
+}
+
+.dropdown__menu a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown.beefup {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+.dropdown .beefup__head {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0 50px 0 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2.5;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.dropdown .beefup__body {
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    margin: 2px 0 0;
+    padding: 5px 0;
+    min-width: 160px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    list-style: none;
+    text-align: left;
+}
+.category_list{
+    padding-top: 20px;
+    transition: all linear 0.3s;
+
+    #checkbox_top {
+        margin-top: 15px;
+    }
+
+    li {
+        margin-bottom: 8px;
+        a {
+            display: inline;
+        }
+
+        div {
+            margin-bottom: 18px;
+
+            input {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                border: 1px solid #ccc;
+
+                &:hover {
+                    border: none;
+                }
+            }
+
+            label {
+                @include fs($h, 1em, 400, $ff1);
+                margin-left: 10px;
+                cursor: pointer;
+            }
+        }
+
+        
+
+        a {
+            @include fs($h, 1em, 400, $ff1);
+            transition: all linear 0.3s;
+
+            &:hover {
+                color: $bl_hov;
+            }
+        }
+
+        .range {
+            margin-top: -4px;
+
+            input {
+                width: 60px;
+                height: 40px;
+                text-align: center;
+                border: 1px solid #ccc;
+                border-radius: 7px;
+                @include fs($p, 0.99em, 400, $ff1);
+            }
+
+            span {
+                color: $p;
+                margin: 0 6px;
+            }
+
+            button {
+                padding: 0;
+                width: 60px;
+                height: 40px;
+                margin-left: 13px;
+                background: $bl_hov;
+                border-radius: 7px;
+                transition: all linear 0.3s;
+                @include fs($wh, 1em, 500, $ff1);
+                border: none;
+
+                &:hover {
+                    background: #3C78B4;
+                }
+            }
+        }
+    }
+}
+.filter_right_head {
+    column-gap: 20px;
+
+    form {
+        border: none;
+
+        label {
+            @include fs($h, 1.04em, 600, $ff1);
+        }
+
+        select {
+            padding: 8px 0 8px 8px;
+            text-align: center;
+            width: 155px;
+            background: $wh;
+            border: 1px solid #D7D7D7;
+            @include fs($h, 14px, 400, $ff1);
+            cursor: pointer;
+
+            option {
+                cursor: pointer;
+                width: 180px;
+            }
+        }
+    }
+}
+.dfdfdfdfd{
+    padding-bottom: 25px;
+}
+.asdas{
+    padding: 90px 0 !important;
+}
+.dfdfdwwe{
+    padding-left: 30px;
+}
+// .dfdfdwwe1{
+//     padding-right: 30px;
+// }
+
+.trrt{
+    padding: 30px 20px 40px 20px !important;
+}
+
+.item_wrapper{
+    margin-top: 30px;
+}
+.col_5_fix_none{
+    display: none;
+}
+.col_item_none{
+    display: none;
+}
+.col_8_item{
+    display: none;
+}
+.sf_fixer{
+    display: none;
+}
+.no_pera{
+    display: none;
+}
+/*  ==========================================================================
+                Banner with Sidebar Filter Category Part End Here
+============================================================================= */
+
+/*  ==========================================================================
+                Offcanvus Filter Category Part Start Here
+============================================================================= */
+
+
+    .cat_left_part {
+        .filter_left_head {
+            margin-top: 18px;
+
+            h4 {
+                @include fs($h, 1.1em, 600, $ff1);
+            }
+
+            a {
+                @include fs($h, 1em, 400, $ff1);
+            }
+        }
+
+        .all_category_wrapper {
+
+            margin-top: 20px;
+
+            .widget_titles {
+                padding-top: 25px;
+                padding-bottom: 16px;
+                border-bottom: 2px solid $line;
+                cursor: pointer;
+
+                #wid_head {
+                    @include fs($h, 1.1em, 600, $ff1);
+
+
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -17px;
+                        width: 100%;
+                        height: 3px;
+                        background: $h;
+                    }
+                }
+
+                #wid_dash,
+                #wid_dash1,
+                #wid_dash2,
+                #wid_dash3,
+                #wid_dash4 {
+                    font-size: 18px;
+                    color: $p;
+                    font-weight: 100;
+                }
+
+
+            }
+
+            #category_list,
+            #category_list1,
+            #category_list2,
+            #category_list3,
+            #category_list4 {
+                padding-top: 20px;
+                transition: all linear 0.3s;
+
+                #checkbox_top {
+                    margin-top: 15px;
+                }
+
+                li {
+                    a {
+                        display: inline;
+                    }
+
+                    div {
+                        margin-bottom: 18px;
+
+                        input {
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+                            border: 1px solid #ccc;
+
+                            &:hover {
+                                border: none;
+                            }
+                        }
+
+                        label {
+                            @include fs($h, 1em, 400, $ff1);
+                            margin-left: 10px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    margin-bottom: 17px;
+
+                    a {
+                        @include fs($h, 1em, 400, $ff1);
+                        transition: all linear 0.3s;
+
+                        &:hover {
+                            color: $bl_hov;
+                        }
+                    }
+
+                    .range {
+                        margin-top: 25px;
+
+                        input {
+                            width: 70px;
+                            height: 45px;
+                            text-align: center;
+                            border: 1px solid #ccc;
+                            border-radius: 7px;
+                            @include fs($p, 0.99em, 400, $ff1);
+                        }
+
+                        span {
+                            color: $p;
+                            margin: 0 6px;
+                        }
+
+                        button {
+                            padding: 0;
+                            width: 70px;
+                            height: 45px;
+                            margin-left: 13px;
+                            background: $bl_hov;
+                            border-radius: 7px;
+                            transition: all linear 0.3s;
+                            @include fs($wh, 1em, 500, $ff1);
+                            border: none;
+
+                            &:hover {
+                                background: #3C78B4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+.sdsdsd{
+    column-gap: 20px;
+}
+  
+.sidebar-wrapper {
+    overflow-y: auto;
+    padding: 0 8px;
+}
+.fully_wraped_list{
+    margin-top: 30px;
+}
+
+.item_wrapper112{
+    &:hover{
+        .item_img{
+            .shape{
+                visibility: visible;
+            }
+        }
+    }
+    .item_img{
+        position: relative;
+        &:hover{
+            .img_hov{
+                visibility: visible;
+            }
+        }
+        .img_hov{
+            position: absolute;
+            left: 0;
+            top: 0;
+            visibility: hidden;
+        }
+        .shape{
+            position: absolute;
+            right: 40px;
+            top: 25px;
+            visibility: hidden;
+            a{
+                width: 40px;
+                height: 40px;
+                background: $wh;
+                border-radius: 50%;
+                i{
+                    color: $p;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .item_info{
+        .first{
+            margin-top: 15px;
+            @include fs($gray, 18px, 500, $ff1);
+            text-transform: uppercase;
+            display: block;
+            transition: $tr;
+            margin-bottom: 1px;
+            &:hover{
+                color: $bl_hov;
+            }
+        }
+        .second{
+            @include fs($h, 23px, 600, $ff1);
+            transition: $tr;
+            margin-bottom: 3px;
+            &:hover{
+                color: $bl_hov;
+            }
+        }
+        .icon_list{
+            
+            margin-bottom: 14px;
+            cursor: pointer;
+            i{
+                color: $star;
+
+            }
+            span{
+                @include fs($h, 18px, 400, $ff1);
+                margin-left: 10px;
+            }
+        }
+        h3{
+            @include fs($h, 20px, 600, $ff1);
+            margin-bottom: 10px;
+            span{
+                text-decoration: line-through;
+                color: $gray;
+                margin-left: 10px;
+            }
+        }
+        p{
+            @include fs($p, 13px, 400, $ff1);
+            line-height: 26px;
+            margin-bottom: 30px;
+        }
+        .button_cont{
+
+            .btn{
+                &:hover{
+                    
+                        background: $bl_hov;
+                        border: 1px solid $bl_hov;
+                        color: $wh;
+
+                }
+                @include fs($h, 18px, 600, $ff1);
+                text-transform: uppercase;
+                padding: 10px 20px;
+                border: 1px solid $gray;
+                transition: $tr;
+                span{
+                    margin-right: 10px;
+                }
+                margin-right: 20px;
+            }
+            .icon1{
+                color: $p;
+                font-size: 26px;
+                transition: $tr;
+                &:hover{
+                    color: $bl_hov;
+                }
+            }
+            .icon2{
+                color: $p;
+                font-size: 26px;
+                margin-left: 20px;
+                transition: $tr;
+                &:hover{
+                    color: $bl_hov;
+                }
+            }
+        }
+    }
+}
+.leftqjhw{
+    right: 60px !important;
+}
+/*  ==========================================================================
+                Offcanvus Filter Category Part End Here
+============================================================================= */
+
+
+/*  ==========================================================================
+                Offcanvus start Here
+============================================================================= */
+
+
+.show11{
+    &:hover{
+        background: $bl_hov !important;
+        span{
+            color: $wh !important;
+        }
+    }
+}
+#banside_category .container .category_wrap {
+    padding-bottom: 20px !important;
+}
+ .banner_img {
+	margin-top: 20px !important;
+}
+
+
+.hov_cart_item ul li a i{
+    &:hover{
+        color: $bl_hov;
+    }
+}
+.item_fix{
+    display: none;
+}
+.dsdsdd{
+    width: 20% !important;
+}
+.offcanvas-start {
+	width: 300px;
+}
+
+/*  ==========================================================================
+                Offcanvus End Here
+============================================================================= */

@@ -1,0 +1,124 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+/*  ===================================================
+                Customer Support Part Start Here
+ =================================================== */
+#category_icon {
+    .container {
+        .cat_wrap {
+            .cat_item {
+                width: 12.5%;
+
+                .cat_icon_item {
+                    &:hover .icon_cat a {
+                        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+                    }
+
+                    &:hover .cat_text a {
+                        color: $ho;
+                    }
+
+                    .icon_cat {
+
+                        a {
+                            color: $p;
+                            font-size: 50px;
+                            width: 125px;
+                            height: 125px;
+                            border-radius: 50%;
+                            background: $wh;
+                            transition: all linear 0.3s;
+
+                            &:hover {
+                                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+                            }
+                        }
+                    }
+
+                    .cat_text {
+
+                        a {
+                            @include fs($h, 1rem, 700, $ff1);
+                            transition: all linear 0.3s;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .discount_ad {
+            padding: 30px 45px;
+            margin-top: 60px;
+
+        }
+
+        .add_first {
+            h3 {
+                @include fs($discount, 2rem, 800, $ff1);
+                text-transform: uppercase;
+            }
+
+            h4 {
+                @include fs($wh !important, 1.3rem !important, 700 !important, $ff1 !important);
+                text-transform: uppercase;
+                margin-left: 15px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: -4px;
+                    width: 100%;
+                    height: 1px;
+                    background: #eee;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -4px;
+                    width: 100%;
+                    height: 1px;
+                    background: #eee;
+                }
+            }
+        }
+
+        .add_second {
+            h4 {
+                @include fs($wh !important, 1.3rem !important, 700 !important, $ff1 !important);
+                text-transform: uppercase;
+            }
+
+            a {
+                @include fs($wh, 1em, 500, $ff1);
+                padding: 8px 25px;
+                text-transform: uppercase;
+                margin-left: 10px;
+
+                span {
+                    margin-left: 5px;
+                }
+
+                transition: all linear 0.3s;
+
+                &:hover {
+                    color: $ho;
+                    background: $wh;
+                }
+
+                background: $h;
+            }
+        }
+
+    }
+}
+
+/*  ===================================================
+                Customer Support Part End Here
+ =================================================== */

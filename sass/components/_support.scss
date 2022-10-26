@@ -1,0 +1,92 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+/*  ===================================================
+                Customer Support Part Start Here
+ =================================================== */
+#support {
+    padding-top: 35px;
+    padding-bottom: 60px;
+
+    .container {
+        .support_cont {
+            background: $wh;
+            border-radius: 3px;
+
+            .support_item {
+                width: 25%;
+
+                .support_text_cont {
+                    padding: 30px 0;
+                    background: $wh;
+                    column-gap: 15px;
+
+                    .sup_icon {
+                        font-size: 36px;
+                        color: $p;
+                    }
+
+                    .sup_text {
+                        h4 {
+                            @include fs($h, 1.04em, 600, $ff1);
+                        }
+
+                        p {
+                            margin-top: 15px;
+                            @include fs($p, 0.9em, 500, $ff1);
+                        }
+
+                    }
+
+                    .sup1 {
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: -35px;
+                            top: 0;
+                            width: 1px;
+                            height: 100%;
+                            background: #eee;
+                        }
+                    }
+
+                    .sup2 {
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: -40px;
+                            top: 0;
+                            width: 1px;
+                            height: 100%;
+                            background: #eee;
+                        }
+                    }
+
+                    .sup3 {
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: -50px;
+                            top: 0;
+                            width: 1px;
+                            height: 100%;
+                            background: #eee;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*  ===================================================
+                Customer Support Part End Here
+ =================================================== */

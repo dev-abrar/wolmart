@@ -1,0 +1,320 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      becomoe vebndor area start
+===============================*/
+#about {
+    background: #ddd;
+
+    .about_head {
+        padding-top: 78px;
+        padding-bottom: 78px;
+
+        h3 {
+            @include fs($h, 34px, 700, $ff1);
+        }
+    }
+
+    .about_wrap {
+        background: $wh;
+
+        h4 {
+            @include fs($h, 13px, 400, $ff1);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #6666663e;
+
+            i {
+                color: $p;
+                margin: 0 5px;
+                font-size: 11px;
+            }
+
+            a {
+                color: $p;
+                transition: $tr;
+
+                &:hover {
+                    color: $h;
+                }
+            }
+        }
+
+        h3 {
+            @include fs($h, 40px, 700, $ff1);
+            margin-top: 90px;
+            text-align: center;
+            line-height: 50px;
+            margin-bottom: 20px;
+
+            span {
+                display: block;
+            }
+        }
+
+        p {
+            @include fs($p, 14px, 400, $ff1);
+            line-height: 24px;
+            text-align: center;
+            padding: 0 145px;
+            margin-bottom: 45px;
+        }
+
+        .ab_first {
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 100px;
+        }
+
+        .ab_scnd {
+            .ab_scnd_img {
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 100px;
+            }
+
+            .ab_scnd_left {
+                h3 {
+                    @include fs($h, 34px, 700, $ff1);
+                    margin-top: 50px;
+                    line-height: 45px;
+                    margin-bottom: 30px;
+                }
+
+                .accordion-item {
+                    margin-bottom: 15px;
+                    border-bottom: 1px solid rgb(223, 220, 220) !important;
+                    border-top: 0;
+                    padding-bottom: 10px;
+                }
+
+                .accordion-button:focus {
+                    z-index: 3;
+                    border: 0;
+                    outline: 0;
+                    box-shadow: 0 0 0 0;
+                }
+
+                .accordion-button {
+                    font-size: 18px;
+                    background: #fff;
+                    border: 0;
+                    font-weight: 600;
+                    color: $h;
+
+                    &:hover {
+                        color: #336699;
+                    }
+                }
+
+                .accordion-button:not(.collapsed) {
+                    font-size: 18px;
+                    color: $h;
+                    box-shadow: none;
+                    transition: $tr;
+                    background: #fff !important;
+
+                    &:hover {
+                        color: #336699;
+                    }
+                }
+
+                .accordion-button:not(.collapsed)::after {
+                    background-image: none !important;
+                    transform: rotate(0deg);
+                    background: #fff !important;
+                    content: '-';
+                    font-size: 25px !important;
+                }
+
+                .accordion-button::after {
+                    content: "+";
+                    font-size: 25px !important;
+                    background-image: none !important;
+                    transform: rotate(0deg);
+                }
+
+                .accordion-body {
+                    color: $p;
+                }
+
+            }
+        }
+
+        .ab_thrd {
+            margin-bottom: 60px;
+
+            .ab_con {
+                h2 {
+                    @include fs(#c2c2c2, 60px, 800, $ff1);
+                    margin-bottom: 25px;
+                }
+
+                h5 {
+                    @include fs($h, 20px, 600, $ff1);
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    padding: 0 60px;
+                }
+            }
+        }
+
+        .ab_fourth {
+            padding-top: 100px;
+            background: #f8f8f8;
+            padding-bottom: 80px;
+
+            .ab_fimg {
+                overflow: hidden;
+                border-radius: 10px;
+            }
+
+            .ab_ftext {
+                margin-left: 20px;
+
+                h3 {
+                    @include fs($h, 34px, 700, $ff1);
+                    text-align: left;
+                    margin-top: 65px;
+                }
+
+                p {
+                    padding: 0;
+                    text-align: left;
+                    margin-bottom: 10px;
+
+                    span {
+                        display: block;
+                        margin-top: 5px;
+                    }
+                }
+
+                a {
+                    @include fs(#fff, 16px, 600, $ff1);
+                    text-transform: uppercase;
+                    border: 0;
+                    background: $h;
+                    transition: $tr;
+                    padding: 10px 20px;
+                    border-radius: 4px;
+                    text-align: center;
+                    margin-top: 25px;
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+
+                    &:hover {
+                        &:after {
+                            width: 0;
+                            padding-top: 0;
+                        }
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius: 50%;
+                        padding-top: 150%;
+                        width: 150%;
+                        background: #f14242;
+                        z-index: -1;
+                        transition: all linear 0.3s;
+                    }
+                }
+            }
+
+            .ab_f_icon {
+                h3 {
+                    font-size: 28px;
+                }
+
+                .ab_icon_row {
+                    margin-top: 20px;
+
+                    .ab_f_icon {
+                        p {
+                            padding: 0;
+                            @include fs($h, 18px, 500, $ff1);
+                            line-height: 28px;
+                            margin-top: 20px;
+                        }
+                    }
+
+                    .ab_f_icon2 {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+
+        .ab_last {
+            padding-bottom: 50px;
+
+            .ab_last_item {
+                .ab_lst_img {
+                    &:hover{
+                        .ab_overflow{
+                            visibility: visible;
+                             opacity: 1;
+                        }
+                    }
+                    .ab_l_img {
+                        overflow: hidden;
+                        border-radius: 15px;
+                        transition: $tr;
+                    }
+                    .ab_overflow{
+                        background: #0505056b;
+                        border-radius: 15px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: $tr;
+                        .ab_last_icon{
+                            a{
+                                color: #fff;
+                                width: 45px;
+                                height: 45px;
+                                border: 2px solid #fff;
+                                border-radius: 50%;
+                                font-size: 25px;
+                                line-height: 45px;
+                                text-align: center;
+                                margin: 0 3px;
+                                transition: $tr;
+                                &:hover{
+                                    background: #2c82d8;
+                                    border-color: #2c82d8;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .ab_lst_text {
+                    margin-top: 20px;
+                    h5 {
+                        @include fs($h, 20px, 700, $ff1);
+                        margin-bottom: 7px;
+                    }
+
+                    p {
+                        padding: 0;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/*===============================
+      becomoe vebndor area end
+===============================*/

@@ -1,0 +1,29 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+// ====================================//
+// =========== sale area start ========//
+// ====================================//
+
+#sale {
+    .sale-back {
+        padding: 50px 0;
+        border-radius: 10px;
+
+        .sale-text {
+            h2 {
+                @include fs(#fff, 48px, 400, $ff2);
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                @include fs(#fff, 48px, 800, $ff1);
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+// ====================================//
+// =========== sale area end ==========//
+// ====================================//

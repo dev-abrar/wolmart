@@ -1,0 +1,81 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      vendor area start
+===============================*/
+#vendor {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    .ven_bg {
+        .ven_item {
+            top: 25px;
+            left: 25px;
+            padding-right: 25px;
+
+            .ven_text {
+                h3 {
+                    @include fs($h, 24px, 700, $ff1);
+                    margin-bottom: 13px;
+                }
+
+                p {
+                    @include fs($p, 14px, 400, $ff1);
+                    line-height: 24px;
+                    padding-right: 200px;
+                }
+            }
+
+            .ven_img {
+                padding: 20px;
+                background: #fff;
+                border-radius: 5px;
+                border: 1px solid #ddd;
+                margin-top: 25px;
+
+                h4 {
+                    @include fs($h, 14px, 700, $ff1);
+                    margin-bottom: 20px;
+                }
+
+                .ven_img2 {
+                    overflow: hidden;
+                    border-radius: 5px;
+                }
+
+                .ven_img2 {
+                    &:hover {
+                        .ven_img_verly {
+                            opacity: 1;
+                        }
+                    }
+
+                    .ven_img_verly {
+                        background: rgba(0, 0, 0, 0.60);
+                        opacity: 0;
+                        transition: $tr;
+
+                        a {
+                            @include fs(#fff, 12px, 600, $ff1);
+                            transition: $tr;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+                            span {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/*===============================
+      vendor area end
+===============================*/

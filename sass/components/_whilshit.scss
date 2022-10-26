@@ -1,0 +1,129 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      whileshit area start
+===============================*/
+#wishlist {
+    .wishlist_head {
+        padding-top: 78px;
+        padding-bottom: 78px;
+
+        h3 {
+            @include fs($h, 34px, 700, $ff1);
+        }
+    }
+
+    .wishlist_wrap {
+        background: $wh;
+
+        h4 {
+            @include fs($h, 13px, 400, $ff1);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #6666663e;
+
+            i {
+                color: $p;
+                margin: 0 5px;
+                font-size: 11px;
+            }
+
+            a {
+                color: $p;
+                transition: $tr;
+
+                &:hover {
+                    color: $h;
+                }
+            }
+        }
+        .chec_h4{
+            border-bottom: none !important;
+            @include fs($p, 24px, 600, $ff1);
+            padding-top: 80px;
+            i{
+                font-size: 22px;
+                margin: 0 10px;
+            }
+        }
+    }
+    
+
+    .com_icon {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        i {
+            color: $p;
+            font-size: 60px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            @include fs($p, 14px, 600, $ff1);
+            margin-bottom: 30px;
+        }
+
+        a {
+            @include fs(#fff, 16px, 600, $ff1);
+            text-transform: uppercase;
+            border: 0;
+            background: $h;
+            transition: $tr;
+            padding: 10px 50px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 25px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+            &:hover {
+                &:after {
+                    width: 0;
+                    padding-top: 0;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                padding-top: 150%;
+                width: 150%;
+                background: #f14242;
+                z-index: -1;
+                transition: all linear 0.3s;
+            }
+        }
+        .error_a{
+            padding: 13px 30px;
+            i{
+                font-size: 13px;
+                color: #fff;
+                margin-left: 5px;
+                margin-bottom: 0;
+            }
+        }
+        .er_p{
+            margin-bottom: 20px !important;
+        }
+        .er_h3{
+            @include fs($h, 30px, 700, $ff1);
+            margin-bottom: 20px;
+            margin-top: 65px;
+            span{
+                color: #ff9742;
+            }
+        }
+    }
+}
+
+
+/*===============================
+      whileshit area end
+===============================*/

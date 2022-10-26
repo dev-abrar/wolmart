@@ -1,0 +1,60 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+// ====================================//
+// ========= badge area start =========//
+// ====================================//
+
+#badge {
+    padding-bottom: 60px;
+
+    .badge-item {
+        padding: 40px;
+        border-radius: 10px;
+
+        .badge-text {
+            h3 {
+                @include fs(#fff, 30px, 400, $ff2);
+                margin-bottom: 20px;
+            }
+
+            .badge-text {
+                h2 {
+                    @include fs(#fff, 30px, 700, $ff1);
+                    margin-bottom: 10px;
+                }
+
+                .shop-now {
+                    margin-top: 20px;
+
+                    a {
+                        @include fs(#fff, 14px, 700, $ff1);
+                        text-transform: uppercase;
+                        position: relative;
+
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            right: 0;
+                            bottom: 0;
+                            width: 0%;
+                            height: 3px;
+                            background: #fff;
+                            transition: all linear .3s;
+                        }
+
+                        &:hover:after {
+                            width: 100%;
+                            left: 0;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ====================================//
+// ========== badge area end ==========//
+// ====================================//

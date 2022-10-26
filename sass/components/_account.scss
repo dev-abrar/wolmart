@@ -1,0 +1,388 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      account area start
+===============================*/
+#account {
+    .account_head {
+        padding-top: 78px;
+        padding-bottom: 78px;
+
+        h3 {
+            @include fs($h, 34px, 700, $ff1);
+        }
+    }
+
+    .account_wrap {
+        background: $wh;
+        padding-bottom: 60px;
+
+        h4 {
+            @include fs($h, 13px, 400, $ff1);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #6666664d;
+            margin-bottom: 60px;
+
+            i {
+                color: $p;
+                margin: 0 5px;
+                font-size: 11px;
+            }
+
+            a {
+                color: $p;
+                transition: $tr;
+
+                &:hover {
+                    color: $h;
+                }
+            }
+        }
+
+        .form {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin: 0 auto;
+            padding: 30px 30px;
+            box-shadow: 1px 2px 14px -1px rgba(0, 0, 0, 0.75);
+            width: 510px;
+            border-radius: 5px;
+            .acount_heading{
+                display: flex;
+                width: 100%;
+                height: 40px;
+                h3 {
+                    position: relative;
+                    text-align: center;
+                    width: 50%;
+                    @include fs($h, 18px, 600, $ff1);
+                    text-transform: uppercase;
+                    border-bottom: 3px solid #ddd;
+                    cursor: pointer;
+                    &:nth-child(1){
+                        border-bottom: 3px solid $ho;
+                    }
+                }
+            }
+           .main_form{
+            position: relative;
+            .form_1st_item {
+                margin-top: 20px;
+        
+                p {
+                    @include fs($p, 14px, 400, $ff1);
+                    margin-bottom: 7px;
+                    line-height: 24px;
+                }
+        
+                input {
+                    width: 100%;
+                    height: 45px;
+                    border-radius: 3px;
+        
+                    &:focus {
+                        outline: 0;
+                    }
+        
+                    border: 1px solid #6666664d;
+                    margin-bottom: 20px;
+                    padding-left: 20px;
+                }
+        
+                .check {
+                    margin-top: 20px;
+        
+                    #check {
+                        width: 15px;
+                        height: 15px;
+                        margin-bottom: 0;
+                        margin-right: 5px;
+                        cursor: pointer;
+                    }
+                    #check2 {
+                        width: 15px;
+                        height: 15px;
+                        margin-bottom: 0;
+                        margin-right: 5px;
+                        cursor: pointer;
+                    }
+        
+                    label {
+                        cursor: pointer;
+                        @include fs($p, 14px, 400, $ff1);
+        
+                        a {
+                            color: $ho;
+                            transition: $tr;
+        
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+        
+                button {
+                    @include fs(#fff, 16px, 600, $ff1);
+                    text-transform: uppercase;
+                    border: 0;
+                    background: $h;
+                    transition: $tr;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    width: 40%;
+                    margin-left: 30%;
+                    text-align: center;
+                    margin-top: 25px;
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+                    margin-bottom: 30px;
+        
+                    &:hover {
+                        &:after {
+                            width: 0;
+                            padding-top: 0;
+                        }
+                    }
+        
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius: 50%;
+                        padding-top: 150%;
+                        width: 150%;
+                        background: #f14242;
+                        z-index: -1;
+                        transition: all linear 0.3s;
+                    }
+        
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+        
+                .form_icon {
+                    text-align: center;
+                    margin-top: 20px;
+        
+                    .a2 {
+                        color: #00adef;
+                        border: 1px solid #00adef;
+        
+                        &:hover {
+                            background: #00adef;
+                        }
+                    }
+        
+                    .a3 {
+                        color: #dd4b39;
+                        border: 1px solid #dd4b39;
+        
+                        &:hover {
+                            background: #dd4b39;
+                        }
+                    }
+        
+                    a {
+                        color: #1b4f9b;
+                        font-size: 14px;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        line-height: 30px;
+                        border: 1px solid #1b4f9b;
+                        border-radius: 50%;
+                        margin-left: 5px;
+                        transition: all linear 0.3s;
+        
+                        &:hover {
+                            color: #fff;
+                            background: #1b4f9b;
+                        }
+                    }
+                }
+            }
+
+            .form_2nd_item{
+                display: none;
+                margin-top: 20px;
+                p {
+                    @include fs($p, 14px, 400, $ff1);
+                    margin-bottom: 7px;
+                    line-height: 24px;
+
+                    a {
+                        color: $ho;
+                        transition: $tr;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                input {
+                    width: 100%;
+                    height: 45px;
+                    border-radius: 3px;
+
+                    &:focus {
+                        outline: 0;
+                    }
+
+                    border: 1px solid #6666664d;
+                    margin-bottom: 20px;
+                    padding-left: 20px;
+                }
+
+                .type1 {
+                    margin-top: 20px;
+                }
+
+                .input {
+                    #customer {
+                        width: 15px;
+                        height: 15px;
+                        margin-bottom: 0;
+                        cursor: pointer;
+                        margin-bottom: 7px;
+                        border: 0;
+                    }
+
+                    #seller {
+                        width: 15px;
+                        height: 15px;
+                        cursor: pointer;
+                    }
+
+                    label {
+                        cursor: pointer;
+                        @include fs($p, 14px, 400, $ff1);
+                        margin-left: 5px;
+                    }
+                }
+
+                .check {
+                    margin-top: 20px;
+
+                    #check {
+                        width: 15px;
+                        height: 15px;
+                        margin-bottom: 0;
+                        margin-right: 5px;
+                        cursor: pointer;
+                    }
+
+                    label {
+                        cursor: pointer;
+                        @include fs($p, 14px, 400, $ff1);
+
+                        a {
+                            color: $ho;
+                            transition: $tr;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    @include fs(#fff, 16px, 600, $ff1);
+                    text-transform: uppercase;
+                    border: 0;
+                    background: $h;
+                    transition: $tr;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    width: 40%;
+                    margin-left: 30%;
+                    text-align: center;
+                    margin-top: 25px;
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+                    margin-bottom: 30px;
+
+                    &:hover {
+                        &:after {
+                            width: 0;
+                            padding-top: 0;
+                        }
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius: 50%;
+                        padding-top: 150%;
+                        width: 150%;
+                        background: #f14242;
+                        z-index: -1;
+                        transition: all linear 0.3s;
+                    }
+
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+
+                .form_icon {
+                    text-align: center;
+                    margin-top: 20px;
+
+                    .a2 {
+                        color: #00adef;
+                        border: 1px solid #00adef;
+
+                        &:hover {
+                            background: #00adef;
+                        }
+                    }
+
+                    .a3 {
+                        color: #dd4b39;
+                        border: 1px solid #dd4b39;
+
+                        &:hover {
+                            background: #dd4b39;
+                        }
+                    }
+
+                    a {
+                        color: #1b4f9b;
+                        font-size: 14px;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        line-height: 30px;
+                        border: 1px solid #1b4f9b;
+                        border-radius: 50%;
+                        margin-left: 5px;
+                        transition: all linear 0.3s;
+
+                        &:hover {
+                            color: #fff;
+                            background: #1b4f9b;
+                        }
+                    }
+                }
+            }
+           }
+        }
+    }
+}
+
+/*===============================
+      account area end
+===============================*/

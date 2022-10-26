@@ -1,0 +1,330 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+/*  ===================================================
+                Banner Part Start Here
+ =================================================== */
+
+#banner {
+    padding-top: 20px;
+
+    .container {
+        .row {
+            .col-lg-9 {
+                .main_banner_slide {
+                    position: relative;
+                    transition: all linear 0.3s;
+                    overflow: hidden;
+
+
+                    &:hover .owl-nav {
+                        visibility: visible;
+
+                        .owl-prev {
+                            left: 10px;
+                        }
+
+                        .owl-next {
+                            right: 10px;
+                        }
+
+                    }
+
+                    .owl-nav {
+                        position: absolute;
+                        visibility: hidden;
+                        top: 50%;
+                        width: 100%;
+                        transition: all linear 0.3s;
+
+                        .owl-prev {
+                            font-size: 4em;
+                            font-weight: 200;
+                            position: absolute;
+                            left: -30px;
+                            top: -75px !important;
+                            background: transparent;
+                            color: #3d5e6ecf;
+                            transition: all linear 0.3s;
+
+                            span {
+                                width: 0;
+                            }
+
+                            &:hover {
+                                color: $ho;
+                            }
+
+                        }
+
+                        .owl-next {
+                            font-size: 4em;
+                            font-weight: 200;
+                            position: absolute;
+                            right: -30px;
+                            top: -75px !important;
+                            background: transparent;
+                            color: #3d5e6ecf;
+                            transition: all linear 0.3s;
+
+                            span {
+                                width: 0;
+                            }
+
+                            &:hover {
+                                color: $ho;
+                            }
+                        }
+                    }
+
+                    .banner_item {
+                        position: relative;
+
+                        .banner_text_cont1 {
+                            position: absolute;
+                            top: 25%;
+                            right: 8%;
+                            text-align: center;
+
+                            h2 {
+                                @include fs($wh, 5.3em, 400, $ff2);
+                                margin-bottom: 43px;
+                            }
+
+                            h4 {
+                                margin-bottom: 20px;
+                                @include fs($wh, 1.2em, 400, $ff1);
+                                text-transform: uppercase;
+                            }
+
+                            h3 {
+                                @include fs($wh, 1.99em, 700, $ff1);
+                                margin-bottom: 32px;
+                                text-transform: uppercase;
+                            }
+
+                            a {
+                                @include fs($wh, 1em, 500, $ff1);
+                                border: 1px solid rgba(255, 255, 255, .4);
+                                padding: 12px 30px;
+                                text-transform: uppercase;
+
+                                span {
+                                    margin-left: 5px;
+                                }
+
+                                transition: all linear 0.3s;
+
+                                &:hover {
+                                    color: $ho;
+                                    background: $wh;
+                                }
+                            }
+
+
+                        }
+
+                        .banner_text_cont2 {
+                            position: absolute;
+                            left: 8%;
+                            top: 20%;
+
+                            h4 {
+                                @include fs($h, 1.9em, 400, $ff2);
+                                letter-spacing: 1.8px;
+                                margin-bottom: 15px;
+                            }
+
+                            h2 {
+                                @include fs($h, 2.2em, 800, $ff1);
+                                margin-bottom: 25px;
+
+                                span {
+                                    color: $discount !important;
+                                }
+                            }
+
+                            a {
+                                @include fs($wh, 1em, 500, $ff1);
+                                padding: 10px 30px;
+                                text-transform: uppercase;
+
+                                span {
+                                    margin-left: 5px;
+                                }
+
+                                transition: all linear 0.3s;
+
+                                &:hover {
+                                    color: $ho;
+                                    background: $wh;
+                                }
+
+                                background: $h;
+                            }
+                        }
+
+                        .banner_text_cont3 {
+                            position: absolute;
+                            left: 8%;
+                            top: 20%;
+
+                            h4 {
+                                @include fs($h, 1.8em, 400, $ff2);
+                                margin-bottom: 15px;
+                                line-height: 30px;
+                            }
+
+                            h2 {
+                                @include fs($h, 3.4em, 800, $ff1);
+                                margin-bottom: 45px;
+
+                                span {
+                                    display: block;
+                                    margin-top: 25px;
+                                }
+                            }
+
+                            .ban3_btn {
+                                position: relative;
+
+                                a {
+                                    @include fs($wh, 1em, 500, $ff1);
+                                    padding: 10px 30px;
+                                    text-transform: uppercase;
+
+                                    span {
+                                        margin-left: 5px;
+                                    }
+
+                                    transition: all linear 0.3s;
+
+                                    &:hover {
+                                        color: $ho;
+                                        background: $wh;
+                                    }
+
+                                    background: $h;
+                                }
+
+                                .ban3_img {
+                                    position: absolute;
+                                    right: -55%;
+                                    bottom: 5%;
+
+                                    img {
+                                        width: 50%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col-lg-3 {
+                .right_banner_cont {
+                    .right_banner {
+                        position: relative;
+
+                        .right_ban_text {
+                            position: absolute;
+                            left: 5%;
+                            top: 5%;
+
+                            h4 {
+                                @include fs($p, 1.2em, 500, $ff2);
+                                margin-bottom: 15px;
+                                letter-spacing: 1px;
+                            }
+
+                            h3 {
+                                @include fs($h, 1.3em, 700, $ff1);
+                                margin-bottom: 10px;
+                                text-transform: uppercase;
+                            }
+
+                            a {
+                                @include fs($h, 0.94em, 700, $ff1);
+                                text-transform: uppercase;
+
+                                span {
+                                    margin-left: 5px;
+                                }
+
+                                position: relative;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -2px;
+                                    width: 100%;
+                                    height: 1px;
+                                    background: $p;
+                                    transform: scaleX(0);
+                                    transition: all linear 0.2s;
+                                }
+
+                                &:hover {
+                                    &::after {
+                                        transform: scaleX(1);
+                                    }
+
+                                    &::before {
+                                        transform: scaleX(1);
+                                    }
+                                }
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -4px;
+                                    width: 100%;
+                                    height: 1px;
+                                    background: $p;
+                                    transform: scaleX(0);
+                                    transition: all linear 0.2s;
+                                }
+                            }
+                        }
+
+                        .right_ban_text_color {
+                            h4 {
+                                color: $gray !important;
+                            }
+
+                            h3 {
+                                color: $wh !important;
+                            }
+
+                            a {
+                                color: $wh !important;
+                            }
+                        }
+                    }
+
+                    .right_ban_top {
+                        margin-top: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .owl-carousel {
+// 	display:inherit !important;
+// }
+// .owl-carousel{
+// 	display: block !important;
+// }
+.owl-theme .owl-dots {
+    display: none;
+}
+
+/*  ===================================================
+                Banner Part End Here
+ =================================================== */

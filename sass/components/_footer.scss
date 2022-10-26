@@ -1,0 +1,266 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      footer area start
+===============================*/
+#footer {
+    background: #242424;
+
+    .footer_top {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #d7d6d614;
+
+        .f_t_logo {
+            img {
+                max-width: 150px;
+            }
+        }
+
+        .f_t_icon {
+            i {
+                font-size: 50px;
+                color: #fff;
+            }
+        }
+
+        .f_t_text {
+            margin-left: 25px;
+
+            h3 {
+                @include fs(#fff, 18px, 600, $ff1);
+                text-transform: uppercase;
+                margin-top: 7px;
+                margin-bottom: 12px;
+            }
+
+            p {
+                @include fs(#999999, 14px, 400, $ff1);
+            }
+        }
+
+        form {
+            input {
+                width: 257px;
+                padding-top: 14px;
+                padding-bottom: 14px;
+                padding-left: 20px;
+                border-radius: 5px;
+                border: 0;
+                font-family: $ff1;
+
+                &:focus {
+                    outline: 0;
+                }
+            }
+
+            button {
+                border: 0;
+                padding: 14px 20px;
+                background: #1cbcd0;
+                border-radius: 5px;
+                @include fs(#fff, 16px, 600, $ff1);
+                text-transform: uppercase;
+                overflow: hidden;
+                z-index: 1;
+                position: relative;
+                margin-left: 10px;
+
+                &:hover {
+                    &::after {
+                        padding-top: 0;
+                        width: 0;
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    padding-top: 150%;
+                    width: 150%;
+                    background: $ho;
+                    z-index: -1;
+                    transition: $tr;
+                }
+            }
+        }
+    }
+
+    .footer_mid {
+        padding-top: 60px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #d7d6d614;
+
+        .fm_first {
+            h5 {
+                @include fs(#999999, 14px, 400, $ff1);
+                margin-bottom: 20px;
+            }
+
+            a {
+                @include fs(#fff, 18px, 600, $ff1);
+                transition: $tr;
+                margin-bottom: 20px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                @include fs($p, 13px, 400, $ff1);
+                line-height: 24px;
+                padding-right: 150px;
+
+                span {
+                    display: block;
+                    margin-top: 20px;
+                    color: #999;
+                }
+            }
+
+            .fm_icon {
+                margin-top: 15px;
+
+                a {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #1b4f9b;
+                    line-height: 30px;
+                    text-align: center;
+                    margin-right: 5px;
+
+                    i {
+                        font-size: 13px;
+                    }
+                }
+
+                .i1 {
+                    background: #00adef;
+                }
+
+                .i2 {
+                    background: #cc0001;
+                }
+
+                .i3 {
+                    background: #2c567e;
+                }
+
+                .i4 {
+                    background: #f96a02;
+                }
+            }
+        }
+
+        .fm_scnd {
+            h3 {
+                @include fs(#fff, 16px, 600, $ff1);
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                li {
+                    a {
+                        @include fs(#999999, 13px, 400, $ff1);
+                        margin-bottom: 8px;
+                        transition: $tr;
+
+                        &:hover {
+                            color: $ho;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_btm {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #d7d6d614;
+
+        .f_btm_text {
+            margin-bottom: 25px;
+
+            h4 {
+                @include fs(#999999, 16px, 600, $ff1);
+                margin-right: 20px;
+            }
+
+            a {
+                font-size: 14px;
+                color: #999999;
+                margin-top: -3px;
+                transition: $tr;
+                border-right: 1px solid #d7d6d63c;
+                padding: 0 10px;
+
+                &:hover {
+                    color: $ho;
+                }
+            }
+
+            .al {
+                border-right: 0;
+            }
+        }
+    }
+
+    .f_bottom {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        p {
+            @include fs($p, 14px, 400, $ff1);
+        }
+
+        .f_btm_last {
+            .f_btm_img {
+                margin-top: -10px;
+            }
+        }
+    }
+}
+
+/*===============================
+      footer area end
+===============================*/
+.bt_top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    background: rgb(25, 25, 25);
+    border-radius: 2px 10px 2px 10px;
+    color: #fff;
+    -webkit-animation: bt_top 3s;
+    animation: bt_top 3s;
+    display: none;
+    z-index: 999;
+}
+
+@-webkit-keyframes bt_top {
+
+    0% {
+        top: 0;
+        right: 30px;
+    }
+
+    100% {
+        top: 92%;
+        right: 30px;
+    }
+}

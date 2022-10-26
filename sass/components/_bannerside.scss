@@ -1,0 +1,93 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+/*  ==============================================================
+                Banner with Sidebar Part Start Here
+ ================================================================ */
+ .banner_header1{
+    padding-top: 20px;
+    a{
+        @include fs(#878787, 1em, 500, $ff1);
+        transition: all linear 0.2s;
+        &:hover{
+            color: $h;
+        }
+
+    }
+    h3{
+        @include fs($h, 0.98em, 500, $ff1);
+        display: inline;
+    }
+    span{
+        margin: 0 7px !important;
+    }
+}
+
+#banner_sidebar{
+        .row{
+            .col-lg-3{
+                .banner_header{
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    a{
+                        @include fs(#878787, 1.1em, 500, $ff1);
+                        transition: all linear 0.2s;
+                        &:hover{
+                            color: $h;
+                        }
+
+                    }
+                    h3{
+                        @include fs($h, 1.1em, 500, $ff1);
+                        display: inline;
+                    }
+                    span{
+                        margin: 0 7px !important;
+                    }
+                }
+            }
+            .col-lg-12{
+                .banner_img{
+                    padding: 80px 90px;
+                    h3{
+                        @include fs($h, 2em, 600, $ff1);
+                        margin-bottom: 20px;
+                    }
+                    h2{
+                        @include fs($wh, 2.6em, 700, $ff1);
+                        text-transform: uppercase;
+                        margin-bottom: 35px;
+                    }
+                    a {
+                        @include fs($wh, 1em, 500, $ff1);
+                        padding: 12px 30px;
+                        text-transform: uppercase;
+
+                        span {
+                            margin-left: 5px;
+                        }
+
+                        transition: all linear 0.3s;
+
+                        &:hover {
+                            background: $p;
+                        }
+
+                        background: $h;
+                    }
+                }
+            }
+        }
+    
+}
+#banner_sidebar .row .col-lg-3 .banner_header2 {
+	padding-top: 16px !important;
+}
+.mbottoom{
+    margin-top: 30px;
+}
+.mbottom1{
+    margin-bottom: 20px;
+}
+/*  ==============================================================
+                Banner with Sidebar Part End Here
+ ================================================================ */

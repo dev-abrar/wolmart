@@ -1,0 +1,180 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      contact area start
+===============================*/
+#contact {
+    .contact_head {
+        padding-top: 78px;
+        padding-bottom: 78px;
+
+        h3 {
+            @include fs($h, 34px, 700, $ff1);
+        }
+    }
+
+    .contact_wrap {
+        background: $wh;
+        padding-bottom: 60px;
+
+        h4 {
+            @include fs($h, 13px, 400, $ff1);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #6666662a;
+
+            i {
+                color: $p;
+                margin: 0 5px;
+                font-size: 11px;
+            }
+
+            a {
+                color: $p;
+                transition: $tr;
+
+                &:hover {
+                    color: $h;
+                }
+            }
+        }
+
+        .con_information {
+            padding-bottom: 60px;
+            border-bottom: 1px solid #6666662a;
+
+            h3 {
+                @include fs($h, 26px, 700, $ff1);
+                margin-bottom: 25px;
+                margin-top: 60px;
+            }
+
+            p {
+                @include fs($p, 14px, 400, $ff1);
+                margin-bottom: 55px;
+            }
+
+            .information_item {
+                i {
+                    font-size: 50px;
+                    color: #336699;
+                }
+
+                h5 {
+                    @include fs($h, 20px, 700, $ff1);
+                    margin-top: 25px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .con_form {
+            .accordion-item {
+                margin-bottom: 15px;
+                border: 1px solid #dddddd8d;
+                border-top: 0;
+            }
+
+            .accordion-button:focus {
+                z-index: 3;
+                border: 0;
+                outline: 0;
+                box-shadow: 0 0 0 0;
+            }
+
+            .accordion-button {
+                background: #dddddd46;
+                border: 0;
+                font-weight: 600;
+                color: $h;
+
+                &:hover {
+                    color: #336699;
+                }
+            }
+
+            .accordion-button:not(.collapsed) {
+                color: $h;
+                box-shadow: none;
+                transition: $tr;
+                background: #dddddd46;
+
+                &:hover {
+                    color: #336699;
+                }
+            }
+
+            .accordion-button:not(.collapsed)::after {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                transform: rotate(-180deg);
+            }
+
+            .accordion-body {
+                color: $p;
+            }
+
+            h3 {
+                @include fs($h, 22px, 700, $ff1);
+                margin-top: 60px;
+                margin-bottom: 20px;
+            }
+
+            form {
+                h5 {
+                    @include fs($h, 14px, 400, $ff1);
+                    margin-bottom: 20px;
+                    margin-top: 5px;
+                }
+
+                input {
+                    &:focus {
+                        outline: 0;
+                    }
+
+                    width: 100%;
+                    height: 45px;
+                    border: 1px solid #6666662a;
+                    border-radius: 3px;
+                    margin-bottom: 25px;
+                    padding-left: 20px;
+                }
+
+                textarea {
+                    &:focus {
+                        outline: 0;
+                    }
+
+                    width: 100%;
+                    height: 140px;
+                    border: 1px solid #6666662a;
+                    border-radius: 3px;
+                    margin-bottom: 25px;
+                    padding-left: 20px;
+                    padding-top: 20px;
+                    resize: none;
+                }
+
+                button {
+                    text-transform: uppercase;
+                    @include fs(#fff, 16px, 600, $ff1);
+                    background: $h;
+                    border: 0;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    transition: $tr;
+
+                    &:hover {
+                        background: #333333dc;
+                    }
+                }
+            }
+        }
+    }
+}
+iframe{
+    width: 100%;
+}
+/*===============================
+      contact area end
+===============================*/

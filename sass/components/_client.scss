@@ -1,0 +1,28 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      clint area start
+===============================*/
+#clint {
+    margin-top: 60px;
+
+    h3 {
+        @include fs($h, 24px, 700, $ff1);
+        margin-bottom: 30px;
+    }
+
+    .clint_logo {
+        background: #fff;
+
+        .clint_item {
+            img {
+                max-width: 155px;
+            }
+        }
+    }
+}
+
+/*===============================
+      clint area end
+===============================*/

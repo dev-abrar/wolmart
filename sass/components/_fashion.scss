@@ -1,0 +1,381 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      account area start
+===============================*/
+#fashion {
+    .f_wrap {
+        padding-bottom: 70px;
+        background: $wh;
+
+        h4 {
+            @include fs($h, 13px, 400, $ff1);
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            i {
+                color: $p;
+                margin: 0 5px;
+                font-size: 11px;
+            }
+
+            a {
+                color: $p;
+                transition: $tr;
+
+                &:hover {
+                    color: $h;
+                }
+            }
+        }
+
+        .f_ban {
+            .f_img {
+                overflow: hidden;
+                border-radius: 5px;
+                margin-bottom: 25px;
+            }
+
+            .f_ban_text {
+                top: 40px;
+                left: 60px;
+
+                h4 {
+                    @include fs($h, 22px, 500, $ff1);
+                    text-transform: uppercase;
+
+                    span {
+                        color: #1cbcd0;
+                        font-weight: 700;
+                    }
+                }
+
+                h2 {
+                    @include fs($h, 50px, 800, $ff1);
+                }
+
+                a {
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-family: "Poppins", sans-serif;
+                    text-transform: uppercase;
+                    border: 0;
+                    background: #333;
+                    transition: all linear 0.3s;
+                    padding: 10px 25px;
+                    border-radius: 4px;
+                    text-align: center;
+                    margin-top: 25px;
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+
+                    i {
+                        margin-left: 5px;
+                    }
+
+                    &:hover {
+                        &::after {
+                            width: 0;
+                            padding-top: 0;
+                        }
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius: 50%;
+                        padding-top: 150%;
+                        width: 150%;
+                        background: #f14242;
+                        z-index: -1;
+                        transition: all linear 0.3s;
+                    }
+                }
+            }
+
+            .f_select {
+                position: relative;
+                margin-right: 10px;
+
+                button {
+                    background: transparent;
+                    border: 1px solid #66666668;
+                    @include fs($h, 13px, 400, $ff1);
+                    padding: 7px 10px;
+
+                    i {
+                        margin-left: 30px;
+                        color: $p;
+                        font-size: 12px;
+                    }
+                }
+
+                .f_a_btn {
+                    width: 235px;
+                    padding: 10px 15px;
+                    background: #fff;
+                    box-shadow: 0px 6px 26px -10px rgba(0, 0, 0, 0.75);
+                    margin-top: 5px;
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 999;
+
+                    a {
+                        @include fs($h, 13px, 400, $ff1);
+                        background: #dddddd66;
+                        padding: 7px 10px;
+                        transition: $tr;
+                        margin-top: 10px;
+                        margin-right: 5px;
+
+                        &:hover {
+                            color: #fff;
+                            background: $ho;
+                        }
+                    }
+
+                    h5 {
+                        @include fs($h, 13px, 400, $ff1);
+
+                        span {
+                            color: $p;
+                            border: 1px solid #66666668;
+                            padding: 7px 10px;
+                            margin-right: 4px;
+                        }
+
+                        a {
+                            background: $ho;
+                            padding: 10px 10px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            .sel1 {
+                width: 100px;
+            }
+
+            select {
+                background: transparent;
+                border: 1px solid #66666668;
+                @include fs($h, 13px, 400, $ff1);
+                padding-left: 10px;
+                width: 150px;
+                cursor: pointer;
+            }
+        }
+
+        .pro_col {
+            .pro_img {
+                position: relative;
+
+                .span5 {
+                    top: 60px;
+                }
+
+                .span4 {
+                    background: #799b5a;
+                }
+
+                span {
+                    position: absolute;
+                    left: 22px;
+                    top: 22px;
+                    @include fs(#fff, 12px, 400, $ff1);
+                    padding: 3px 8px;
+                    background: #1cbcd0;
+                    border-radius: 4px;
+                    z-index: 99;
+                }
+
+                &:hover {
+                    .pro_img_1 {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    &:hover {
+                        .pro_img_2 {
+                            visibility: visible;
+                            opacity: 1;
+
+                            .pro_icon {
+                                bottom: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .pro_img_1 {
+                    visibility: visible;
+                    opacity: 1;
+                    position: relative;
+                    transition: $tr;
+                }
+
+                .pro_img_2 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: $tr;
+                    visibility: hidden;
+                    opacity: 0;
+
+                    .pro_icon {
+                        position: absolute;
+                        bottom: 2px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 166px;
+                        padding: 10px 0;
+                        text-align: center;
+                        border-radius: 5px;
+                        background: #fff;
+                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+                        transition: $tr;
+
+                        a {
+                            font-size: 16px;
+                            color: $h;
+                            margin: 0 7px;
+
+                            &:hover {
+                                color: $ho;
+                            }
+
+                            i {
+                                transition: $tr;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pro_text {
+                h3 {
+                    a {
+                        @include fs ($h, 14px, 400, $ff1);
+                        margin-top: 10px;
+                        margin-bottom: 7px;
+                        transition: $tr;
+
+                        &:hover {
+                            color: $ho;
+                        }
+                    }
+                }
+
+                h4 {
+                    @include fs ($h, 18px, 500, $ff1);
+
+                    span {
+                        color: #33333394;
+                        margin-left: 5px;
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            top: 12px;
+                            right: 0;
+                            width: 100%;
+                            height: 1px;
+                            background: #33333394;
+                        }
+                    }
+                }
+
+                .p_icon {
+                    a {
+                        color: $p;
+                    }
+
+                    .a2 {
+                        color: #3333336f;
+                    }
+
+                    .a3 {
+                        font-size: 14px;
+                        color: #33333394;
+                        transition: $tr;
+                        margin-bottom: 8px;
+
+                        &:hover {
+                            color: $ho;
+                        }
+                    }
+                }
+            }
+        }
+
+        .row_2 {
+            border-bottom: 1px solid #6666662a;
+        }
+
+        .f_page {
+            margin-top: 60px;
+
+            span {
+                @include fs($p, 15px, 500, $ff1);
+                margin-left: 10px;
+
+                i {
+                    margin-right: 5px;
+                    font-size: 13px;
+                }
+            }
+
+            .span9 {
+                i {
+                    margin-left: 5px;
+                }
+            }
+
+            .span7 {
+                @include fs($ho, 15px, 400, $ff1);
+                padding: 5px 10px;
+                border-radius: 2px;
+                border: 1px solid #6666662a;
+            }
+
+            .a8 {
+                i {
+                    margin-right: 5px;
+                }
+            }
+
+            a {
+                @include fs($h, 15px, 400, $ff1);
+                padding: 3px 8px;
+                transition: $tr;
+                border-radius: 2px;
+                border: 1px solid #fff;
+
+                &:hover {
+                    color: $ho;
+                    border: 1px solid $ho;
+                }
+
+                i {
+                    margin-left: 5px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+}
+
+/*===============================
+      account area end
+===============================*/

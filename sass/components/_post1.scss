@@ -1,0 +1,904 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      post area start
+===============================*/
+#post1 {
+    .post_head {
+        padding-top: 78px;
+        padding-bottom: 78px;
+
+        h3 {
+            @include fs($h, 34px, 700, $ff1);
+        }
+    }
+
+    .post_wrap {
+        background: $wh;
+
+        h4 {
+            @include fs($h, 13px, 400, $ff1);
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            i {
+                color: $p;
+                margin: 0 5px;
+                font-size: 11px;
+            }
+
+            a {
+                color: $p;
+                transition: $tr;
+
+                &:hover {
+                    color: $h;
+                }
+            }
+        }
+
+        .p_post {
+            .p_l_row {
+                margin-bottom: 60px;
+
+                .p_l_img {
+                    overflow: hidden;
+                    border-radius: 5px;
+
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    img {
+                        transition: $tr;
+                    }
+                }
+                .p_l_t{
+                    margin-top: -30px;
+                }
+                .p_l_text {
+                    h3 {
+                        a {
+                            @include fs($h, 22px, 600, $ff1);
+                            margin-bottom: 15px;
+                            transition: $tr;
+                            margin-top: 60px;
+
+                            &:hover {
+                                color: $ho
+                            }
+                        }
+                    }
+
+                    p {
+                        @include fs($p, 14px, 400, $ff1);
+                        line-height: 24px;
+                        margin-bottom: 15px;
+
+                        a {
+                            color: $ho;
+                            transition: $tr;
+
+                            &:hover {
+                                color: $h;
+                            }
+                        }
+                    }
+
+                    span {
+                        @include fs($p, 14px, 400, $ff1);
+
+                        .sa {
+                            font-weight: 400;
+                        }
+
+                        a {
+                            color: $h;
+                            transition: $tr;
+                            margin: 0 5px;
+                            font-size: 16px;
+                            font-weight: 500;
+
+                            i {
+                                margin-right: 5px;
+                            }
+
+                            &:hover {
+                                color: $ho;
+
+                                span {
+                                    color: $ho;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .p_main_left {
+            .p_left61{
+                    padding-bottom: 60px;
+                }
+            .p_left1 {
+                    .p_left1_img {
+                        overflow: hidden;
+                        border-radius: 5px;
+                    }
+                    h3{
+                       a{
+                        @include fs($h, 20px, 600, $ff1);
+                        margin-top: 20px;
+                        transition: $tr;
+                        &:hover{
+                            color: $ho
+                        }
+                       }
+                    }
+                    p{
+                        @include fs($p, 14px, 400, $ff1);
+                        line-height: 24px;
+                        margin-top: 15px;
+                        margin-bottom: 20px;
+                        a{
+                            color: $ho;
+                            transition: $tr;
+                            &:hover{
+                                color: $h;
+                            }
+                        }
+                        
+                    }
+
+                    h4 {
+                        @include fs($h, 16px, 500, $ff1);
+                        margin-top: 10px;
+
+                        a {
+                            color: $h;
+                            margin-left: 5px;
+
+                            &:hover {
+                                color: $ho;
+                            }
+                        }
+                    }
+
+                    span {
+                        @include fs($p, 14px, 400, $ff1);
+
+                        .sa {
+                            font-weight: 400;
+                        }
+
+                        a {
+                            color: $h;
+                            transition: $tr;
+                            margin: 0 5px;
+                            font-size: 16px;
+                            font-weight: 500;
+
+                            i {
+                                margin-right: 5px;
+                            }
+
+                            &:hover {
+                                color: $ho;
+
+                                span {
+                                    color: $ho;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            .p_left2 {
+                    h2 {
+                        @include fs($h, 30px, 600, $ff1);
+                        margin-top: 20px;
+                        margin-bottom: 25px;
+                    }
+
+                    p {
+                        @include fs($p, 14px, 400, $ff1);
+                        line-height: 24px;
+
+                        span {
+                            display: block;
+                            margin-top: 15px;
+
+                            a {
+                                color: $ho;
+                                transition: $tr;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+
+                    .p_left2_mid {
+                        padding-top: 55px;
+                        padding-bottom: 55px;
+                        background: #dddddd6d;
+                        border-left: 2px solid #2879FE;
+                        margin-bottom: 30px;
+
+                        
+                          i{
+                            color: $ho;
+                            font-size: 33px;
+                          }  
+                        
+
+                        h3 {
+                            font-weight: 600;
+
+                            span {
+                                display: block;
+                                margin-top: 30px;
+                                font-size: 13px;
+                                font-style: italic
+                            }
+                        }
+                    }
+                }
+            }
+
+            .p_left3 {
+                h3 {
+                    @include fs($h, 20px, 600, $ff1);
+                    margin-top: 50px;
+                    margin-bottom: 25px;
+                }
+
+                p {
+                    @include fs($p, 14px, 400, $ff1);
+                    line-height: 24px;
+                    margin-bottom: 25px;
+                }
+
+                ul {
+                    margin-left: 25px;
+                    margin-bottom: 20px;
+
+                    li {
+                        @include fs($p, 14px, 400, $ff1);
+                        margin-bottom: 5px;
+
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                h4 {
+                    @include fs($h, 14px, 500, $ff1);
+                    margin-top: -20px;
+
+                    a {
+                        margin-left: 10px;
+                        color: $p;
+                        border: 1px solid #666666a3;
+                        padding: 6px 10px;
+                        border-radius: 3px;
+                        margin-top: 10px;
+                        transition: $tr;
+
+                        &:hover {
+                            color: $ho;
+                            border-color: $ho;
+                        }
+
+                    }
+                }
+
+                .p_left_icon {
+                    margin-bottom: 55px;
+
+                    a {
+                        color: $p;
+                        font-size: 14px;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        line-height: 30px;
+                        border: 1px solid #666666a3;
+                        border-radius: 50%;
+                        margin-left: 5px;
+                        transition: $tr;
+
+                        i {
+                            transition: $tr;
+                        }
+
+                        &:hover {
+                            color: #fff;
+                            border-color: #1b4f9b;
+                            background: #1b4f9b;
+                        }
+                    }
+
+                    .a2 {
+                        &:hover {
+                            background: #00adef;
+                            border-color: #00adef;
+                        }
+                    }
+
+                    .a3 {
+                        &:hover {
+                            background: #f96a02;
+                            border-color: #f96a02;
+                        }
+                    }
+
+                    .a4 {
+                        &:hover {
+                            background: #3c8a38;
+                            border-color: #3c8a38;
+                        }
+                    }
+
+                    .a5 {
+                        &:hover {
+                            background: #0073b2;
+                            border-color: #0073b2;
+                        }
+                    }
+                }
+            }
+
+            .p_left4 {
+                padding-bottom: 60px;
+                border-bottom: 1px solid #66666661;
+
+                .p_left41 {
+                    background: #dddddd66;
+                    padding: 30px 40px;
+
+                    .p_left4_icon {
+                        i {
+                            color: #ddd;
+                            font-size: 110px;
+                        }
+                    }
+
+                    h3 {
+                        @include fs($h, 20px, 500, $ff1);
+
+                        a {
+                            color: $ho;
+                            font-size: 14px;
+                            transition: $tr;
+                            margin-left: 58%;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        span {
+                            display: block;
+                            color: $p;
+                            font-size: 14px;
+                            font-weight: 400;
+                            margin-top: 15px;
+                        }
+                    }
+
+                    p {
+                        @include fs($p, 14px, 400, $ff1);
+                        line-height: 24px;
+                        margin-top: 20px;
+                    }
+                }
+
+                a {
+                    @include fs($h, 16px, 600, $ff1);
+                    margin-top: 60px;
+                    transition: $tr;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        span {
+                            &::after {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+
+                    i {
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        display: block;
+                        font-weight: 400;
+                        text-transform: none;
+                        margin-top: 6px;
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: $h;
+                            transition: $tr;
+                            transform: scale(0);
+                        }
+                    }
+                }
+
+                .pa {
+                    margin-left: 42.5%;
+                    text-align: right;
+                }
+
+                .pa2 {
+                    margin-left: 58.5%;
+                    text-align: right;
+                }
+            }
+
+            .p_left5 {
+                padding-bottom: 60px;
+                border-bottom: 1px solid #66666661;
+
+                h3 {
+                    @include fs($h, 26px, 600, $ff1);
+                    margin-top: 60px;
+                    margin-bottom: 30px;
+                }
+
+                .p_left5_item {
+                    .p_left5img {
+                        overflow: hidden;
+                        border-radius: 5px;
+                        margin-bottom: 10px;
+
+                        &:hover {
+                            img {
+                                transform: scale(1.1);
+                            }
+                        }
+
+                        img {
+                            transition: $tr
+                        }
+                    }
+
+                    span {
+                        @include fs($p, 14px, 400, $ff1);
+
+                        .sa {
+                            font-weight: 400;
+                        }
+
+                        a {
+                            color: $h;
+                            transition: $tr;
+                            margin: 0 5px;
+                            font-size: 14px;
+                            font-weight: 500;
+
+                            i {
+                                margin-right: 5px;
+                            }
+
+                            &:hover {
+                                color: $ho;
+
+                                span {
+                                    color: $ho;
+                                }
+                            }
+                        }
+                    }
+
+                    h4 {
+                        margin-top: -10px;
+                        margin-bottom: -10px;
+
+                        a {
+                            @include fs($h, 16px, 500, $ff1);
+                            transition: $tr;
+
+                            &:Hover {
+                                color: $ho;
+                            }
+                        }
+                    }
+
+                    .p_l_btn {
+                        a {
+                            @include fs($h, 14px, 400, $ff1);
+                            transition: $tr;
+                            position: relative;
+
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 2px;
+                                background: $h;
+                                transform: scale(0);
+                                transition: $tr;
+                            }
+
+                            i {
+                                margin-left: 5px;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .p_left6 {
+                padding-bottom: 60px;
+
+                h3 {
+                    @include fs($h, 26px, 600, $ff1);
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                    border-bottom: 1px solid #66666661;
+                }
+
+                .p_form {
+                    h4 {
+                        @include fs($h, 22px, 600, $ff1);
+                        margin-bottom: -5px;
+                    }
+
+                    p {
+                        @include fs($p, 14px, 400, $ff1);
+                        margin-bottom: 25px;
+
+                        input {
+                            &:focus {
+                                outline: 0;
+                            }
+
+                            width: 18px;
+                            height: 18px;
+                            border: #ccc;
+                            cursor: pointer;
+                            color: #fff;
+                            margin-right: 4px;
+                        }
+                    }
+
+                    a {
+                        @include fs(#fff, 16px, 500, $ff1);
+                        padding: 8px 15px;
+                        background: $h;
+                        border-radius: 4px;
+                        transition: $tr;
+
+                        &:hover {
+                            background: #333333e2;
+                        }
+
+                        i {
+                            margin-left: 4px;
+                        }
+                    }
+
+                    form {
+                        margin-bottom: 20px;
+
+                        textarea {
+                            &:focus {
+                                outline: 0;
+                            }
+
+                            width: 100%;
+                            resize: none;
+                            height: 150px;
+                            border: 1px solid #66666661;
+                            padding-top: 10px;
+                            padding-left: 20px;
+                            @include fs($p, 14px, 400, $ff1);
+                            border-radius: 3px;
+                        }
+
+                        input {
+                            &:focus {
+                                outline: 0
+                            }
+
+                            @include fs($p, 14px, 400, $ff1);
+                            padding: 10px 20px;
+                            margin-top: 20px;
+                            border: 1px solid #66666661;
+                            border-radius: 3px;
+                            width: 49%;
+                        }
+
+                        .input {
+                            margin-left: 14px;
+                        }
+                    }
+                }
+
+            }
+
+            .p_right_content {
+                .p_right {
+                    .p_search {
+                        width: 100%;
+                        border: 1px solid #99999987;
+                        border-radius: 5px;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        padding-left: 20px;
+                        margin-bottom: 40px;
+
+                        input {
+                            border: 0;
+                            width: 250px;
+
+                            &:focus {
+                                outline: 0;
+                                @include fs(#999, 13px, 400, $ff1);
+                            }
+                        }
+
+                        button {
+                            background: transparent;
+                            border: 0;
+                            font-size: 18px;
+                            color: #999;
+                            transition: $tr;
+
+                            &:hover {
+                                color: $ho;
+                            }
+                        }
+                    }
+
+                    .p_top2{
+                       .p_r_wrap{
+                        .owl-nav {
+                            position: relative;
+
+                            .owl-prev {
+                                color: #666666a3;
+                                position: absolute;
+                                right: 45px;
+                                top: -438px !important;
+                                background: transparent;
+                                font-size: 35px;
+                                transition: $tr;
+
+                                &:hover {
+                                    color: $ho;
+                                }
+                            }
+
+                            .owl-next {
+                                color: #666666a3;
+                                position: absolute;
+                                right: 25px;
+                                top: -438px !important;
+                                background: transparent;
+                                font-size: 35px;
+                                transition: $tr;
+
+                                &:hover {
+                                    color: $ho;
+                                }
+                            }
+                        }
+                       }
+                    }
+                    .p_r_top {
+                        margin-bottom: 10px;
+
+                        .ba_btn{
+                            @include fs($h, 14px, 400, $ff1);
+                            border: 1px solid #66666661;
+                            padding: 5px 10px;
+                            margin-bottom: 10px;
+                            margin-right: 10px;
+                            border-radius: 5px;
+                            transition: $tr;
+                            &:hover{
+                                color: $ho;
+                                border-color: $ho;
+                            }
+                        }
+
+                        h3 {
+                            @include fs($h, 18px, 600, $ff1);
+                            margin-bottom: 30px;
+                        }
+
+                        ul {
+                            li {
+                                a {
+                                    @include fs($h, 14px, 400, $ff1);
+                                    margin-bottom: 20px;
+                                    transition: $tr;
+
+                                    &:hover {
+                                        color: $ho;
+                                    }
+                                }
+                            }
+                        }
+
+                        .p_r_wrap {
+                            .owl-nav {
+                                position: relative;
+
+                                .owl-prev {
+                                    color: #666666a3;
+                                    position: absolute;
+                                    right: 45px;
+                                    top: -415px;
+                                    background: transparent;
+                                    font-size: 35px;
+                                    transition: $tr;
+
+                                    &:hover {
+                                        color: $ho;
+                                    }
+                                }
+
+                                .owl-next {
+                                    color: #666666a3;
+                                    position: absolute;
+                                    right: 25px;
+                                    top: -415px;
+                                    background: transparent;
+                                    font-size: 35px;
+                                    transition: $tr;
+
+                                    &:hover {
+                                        color: $ho;
+                                    }
+                                }
+                            }
+
+                            .p_r_item {
+                                .p_r_img {
+                                    overflow: hidden;
+                                    border-radius: 5px;
+                                }
+
+                                .p_r_text {
+                                    h5 {
+                                        a {
+                                            @include fs($p, 13px, 400, $ff1);
+                                            transition: $tr;
+                                            margin-top: 12px;
+                                            margin-bottom: 10px;
+
+                                            &:hover {
+                                                color: $ho;
+                                            }
+                                        }
+                                    }
+
+                                    h3 {
+                                        a {
+                                            @include fs($h, 14px, 500, $ff1);
+                                            transition: $tr;
+                                            line-height: 24px;
+
+                                            &:hover {
+                                                color: $ho;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        p {
+                            @include fs($p, 14px, 400, $ff1);
+                            line-height: 24px;
+                            margin-bottom: 20px;
+                        }
+
+                        h4 {
+                            @include fs(#fff, 15px, 600, $ff1);
+                            background: $ho;
+                            border-radius: 5px;
+                        }
+
+                        .c_row {
+                            margin-top: 20px;
+
+                            .c_col {
+                                h5 {
+                                    @include fs($h, 14px, 600, $ff1);
+                                    text-align: center
+                                }
+
+                                .cu {
+                                    .cl {
+                                        @include fs($p, 14px, 400, $ff1);
+                                        margin-top: 20px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        .f_page {
+            padding-bottom: 60px;
+
+            span {
+                @include fs($p, 15px, 500, $ff1);
+                margin-left: 10px;
+
+                i {
+                    margin-right: 5px;
+                    font-size: 13px;
+                }
+            }
+
+            .span9 {
+                i {
+                    margin-left: 5px;
+                }
+            }
+
+            .span7 {
+                @include fs($ho, 15px, 400, $ff1);
+                padding: 5px 10px;
+                border-radius: 2px;
+                border: 1px solid #6666662a;
+            }
+
+            .a8 {
+                i {
+                    margin-right: 5px;
+                }
+            }
+
+            a {
+                @include fs($h, 15px, 400, $ff1);
+                padding: 3px 8px;
+                transition: $tr;
+                border-radius: 2px;
+                border: 1px solid #fff;
+
+                &:hover {
+                    color: $ho;
+                    border: 1px solid $ho;
+                }
+
+                i {
+                    margin-left: 5px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+
+/*===============================
+      post area end
+===============================*/

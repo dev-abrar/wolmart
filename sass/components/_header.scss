@@ -1,0 +1,1496 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      header area start
+===============================*/
+#header {
+    background: $h;
+
+    .header_top {
+        border-bottom: 1px solid #d7d6d614;
+
+        .header_text {
+            p {
+                @include fs(#BFBFBF, 11px, 400, $ff1);
+                text-transform: uppercase;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        }
+
+        .header_icon {
+            ul {
+                li {
+                    position: relative;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    color: #BFBFBF;
+
+                    &:nth-child(7) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+
+                    a {
+                        @include fs (#BFBFBF, 11px, 400, $ff1);
+                        padding-top: 9px;
+                        padding-bottom: 9px;
+                        transition: $tr;
+                        width: 100%;
+
+                        &:hover {
+                            color: $ho;
+                        }
+
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    ul {
+                        width: 100%;
+                        text-align: center;
+                        background: #fff;
+                        transition: $tr;
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        left: 0;
+                        z-index: 1000;
+
+                        li {
+                            a {
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                                color: #555555;
+                            }
+                        }
+
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            top: -22px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border: 11px solid transparent;
+                            border-bottom: 11px solid #fff;
+                            transition: $tr;
+                            z-index: 1000;
+                        }
+                    }
+
+                    &:hover {
+                        ul {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header_mid {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #d7d6d614;
+
+        .mid_logo {
+            img {
+                max-width: 145px;
+            }
+
+        }
+
+        form {
+            border: 2px solid #696868;
+            padding: 0 16px;
+            background: #fff;
+            border-radius: 5px;
+
+            .s_box {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 1px;
+                    height: 32px;
+                    right: -5px;
+                    top: 6px;
+                    background: #BFBFBF;
+                }
+
+                select {
+                    padding-top: 13px;
+                    padding-bottom: 13px;
+                    padding-right: 16px;
+                    background: transparent;
+                    border: 0;
+                    cursor: pointer;
+                    @include fs ($p, 12px, 400, $ff1);
+                }
+            }
+
+            input {
+                &:focus {
+                    outline: 0;
+                }
+
+                @include fs (#141414, 12px, 400, $ff1);
+                border: 0;
+                padding-top: 13px;
+                padding-bottom: 13px;
+                padding-left: 16px;
+                width: 455px;
+            }
+
+            button {
+                border: 0;
+                background: transparent;
+                font-size: 18px;
+                transition: $tr;
+
+                i {
+                    color: $h;
+                    transition: $tr;
+                }
+
+                &:hover {
+                    i {
+                        color: $ho;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 7px;
+                right: -15px;
+                width: 1px;
+                height: 100%;
+                background: #434242;
+            }
+
+            &:hover {
+                .phn {
+                    color: $ho;
+                }
+            }
+
+            margin-left: 60px;
+
+            a {
+                @include fs(#1CBCD0, 13px, 500, $ff1);
+
+                span {
+                    color: $p;
+                }
+            }
+
+            .phn {
+                @include fs(#fff, 16px, 700, $ff1);
+                transition: $tr;
+
+                i {
+                    font-size: 30px;
+                    position: absolute;
+                    left: -38px;
+                    top: 10px;
+                }
+            }
+        }
+
+        .store {
+            a {
+                position: relative;
+                @include fs(#bfbfbf, 13px, 400, $ff1);
+                margin-left: 13px;
+                margin-top: 32px;
+                transition: $tr;
+
+                &:hover {
+                    color: $ho;
+                }
+
+                i {
+                    transition: $tr;
+                    position: absolute;
+                    top: -28px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 30px;
+
+                    span {
+                        position: absolute;
+                        content: '';
+                        right: -12px;
+                        top: -10px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: red;
+                        color: #fff;
+                        font-size: 10px;
+                        line-height: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .header_bottom {
+        .menu_first {
+            background: $ho;
+            padding-top: 15px;
+
+            ul {
+                li {
+                    width: 100%;
+
+                    &:hover {
+                        >ul {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+
+                    position: relative;
+
+                    a {
+                        @include fs(#fff, 14px, 400, $ff1);
+                        margin-left: 20px;
+                        margin-bottom: 15px;
+                        position: relative;
+                        width: 100%;
+
+                        i {
+                            position: absolute;
+                            top: 8px;
+                            right: 40px;
+                            font-size: 12px;
+                        }
+
+                        span {
+                            font-size: 18px;
+
+                            i {
+                                font-size: 18px;
+                                position: static;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+
+                    ul {
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: $tr;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background: #fff;
+                        width: 100%;
+                        padding: 0 10px;
+                        z-index: 999;
+
+                        li {
+                            border-bottom: 1px solid #33333342;
+
+                            &:hover {
+                                ul {
+                                    left: 103%;
+                                }
+                            }
+
+                            >ul {
+                                position: absolute;
+                                left: 98%;
+                                top: 0;
+                                transition: $tr;
+                                width: 685px;
+                                padding-right: 0;
+
+                                li {
+                                    width: 100%;
+
+                                    .f_2 {
+                                        padding-left: 0;
+                                    }
+
+                                    .f_haed {
+                                        padding: 20px 10px;
+
+                                        h3 {
+                                            @include fs($h, 18px, 600, $ff1);
+                                            border-bottom: 1px solid #33333342;
+                                            padding-bottom: 10px;
+                                            text-transform: uppercase;
+                                            margin-bottom: 5px;
+                                        }
+
+                                        a {
+                                            font-size: 14px;
+                                            margin-left: 0;
+                                        }
+                                    }
+
+                                    .f_img {
+                                        height: 100%;
+
+                                        &:hover {
+                                            img {
+                                                opacity: .9;
+                                            }
+                                        }
+
+                                        img {
+                                            height: 100%;
+                                            width: 100%;
+                                            transition: $tr;
+                                        }
+
+                                        .f_img_text {
+                                            top: 20px;
+                                            left: 25px;
+
+                                            h4 {
+                                                @include fs($h, 16px, 500, $ff1);
+                                                margin-bottom: 6px;
+
+                                                span {
+                                                    color: $ho;
+                                                }
+                                            }
+
+                                            h3 {
+                                                @include fs($h, 30px, 800, $ff1);
+                                                margin-bottom: 8px;
+                                            }
+
+                                            a {
+                                                @include fs($h, 14px, 500, $ff1);
+                                                text-transform: uppercase;
+                                                margin-left: 0;
+                                                position: relative;
+
+                                                &:hover {
+                                                    i {
+                                                        right: 70px;
+                                                    }
+                                                }
+
+                                                i {
+                                                    position: absolute;
+                                                    top: 5px;
+                                                    right: 75px;
+                                                    transition: $tr;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            a {
+                                @include fs($p, 14px, 400, $ff1);
+                                margin-bottom: 7px;
+                                margin-top: 7px;
+                                width: 100%;
+                                margin-left: 8px;
+                                position: relative;
+
+                                &:hover {
+                                    color: $ho;
+
+                                    >i {
+                                        right: 14px;
+                                    }
+                                }
+
+                                i {
+                                    position: absolute;
+                                    top: 7px;
+                                    right: 20px;
+                                    transition: $tr;
+                                }
+
+                                span {
+                                    i {
+                                        position: static;
+                                        margin-left: 0;
+                                        transition: $tr;
+                                    }
+                                }
+                            }
+
+                            .a2 {
+                                color: #2a2929;
+                                font-weight: 500;
+
+                                &:hover {
+                                    >i {
+                                        margin-right: 114px;
+                                    }
+                                }
+
+                                i {
+                                    right: 130px;
+                                    top: 5px;
+                                    transition: $tr;
+                                }
+                            }
+                        }
+
+                        .li2 {
+                            ul {
+                                li {
+                                    .f_img {
+                                        &:hover {
+                                            img {
+                                                opacity: 1;
+                                            }
+                                        }
+
+                                        img {
+                                            opacity: .9;
+                                        }
+
+                                        .f_img_text {
+                                            top: 76%;
+                                            left: 20px;
+
+                                            h5 {
+                                                @include fs(#fff, 16px, 500, $ff1);
+                                                margin-bottom: 8px;
+                                            }
+
+                                            h4 {
+                                                color: #fff;
+
+                                                span {
+                                                    color: #1CBCD0;
+                                                }
+                                            }
+
+                                            h3 {
+                                                color: #fff;
+                                                font-size: 24px;
+                                            }
+
+                                            a {
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .li3 {
+                            ul {
+                                li {
+                                    .f_haed {
+                                        h3 {
+                                            font-size: 16px;
+                                        }
+                                    }
+
+                                    .f_img {
+                                        .f_img_text {
+                                            left: 20px;
+
+                                            h4 {
+                                                color: #BFBFBF;
+                                                margin-bottom: 10px;
+                                            }
+
+                                            a {
+                                                width: 110px;
+                                                height: 36px;
+                                                text-align: center;
+                                                line-height: 36px;
+                                                border: 2px solid #fff;
+                                                color: #fff;
+                                                border-radius: 5px;
+                                                transition: $tr;
+
+                                                &:hover {
+                                                    background: #fff;
+                                                    color: $h;
+                                                }
+                                            }
+
+                                            h3 {
+                                                color: #fff;
+                                                font-size: 24px;
+                                                line-height: 30px;
+                                                font-weight: 400;
+
+                                                span {
+                                                    display: block;
+                                                    color: #1CBCD0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .li4 {
+                            ul {
+                                width: 885px;
+
+                                li {
+                                    .f_haed {
+                                        h3 {
+                                            font-size: 16px;
+                                        }
+                                    }
+
+                                    .f_img_2 {
+                                        border-radius: 5px;
+                                        margin-left: 8px;
+                                        margin-bottom: 20px;
+                                        overflow: hidden;
+                                        margin-right: 15px;
+
+                                        .f_img_text {
+                                            top: 20px;
+                                            right: 20px;
+
+                                            h4 {
+                                                @include fs($p, 13px, 400, $ff1);
+
+                                                span {
+                                                    color: $h;
+                                                    font-weight: 600;
+                                                }
+                                            }
+
+                                            h3 {
+                                                @include fs($h, 26px, 700, $ff1);
+                                                margin-top: 10px;
+                                                margin-bottom: 15px;
+                                            }
+                                        }
+                                    }
+
+                                    .f_img_22 {
+                                        .f_img_text {
+                                            right: 200px;
+                                            top: 20px;
+
+                                            h4 {
+                                                color: #fff;
+
+                                                span {
+                                                    color: #fff;
+                                                }
+                                            }
+
+                                            h3 {
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    position: relative;
+
+                    &:hover {
+                        >ul {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: scaleY(1);
+                            transform-origin: top;
+                        }
+                    }
+
+                    .nav-link {
+                        padding-left: 0;
+                        padding-right: 0;
+                        @include fs(#fff, 16px, 600, $ff1);
+                        margin-right: 35px;
+                        position: relative;
+
+                        &:hover {
+                            &::after {
+                                transform: scale(1, 1);
+                                transform-origin: left center;
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 3px;
+                            background: #fff;
+                            transform: scale(0, 1);
+                            transform-origin: right center;
+                            transition: transform linear .3s;
+                        }
+
+                        i {
+                            font-size: 13px;
+                            position: absolute;
+                            right: -14px;
+                            top: 14px;
+                        }
+                    }
+
+                    >ul {
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        top: 121%;
+                        left: -20px;
+                        background: #fff;
+                        width: 800px;
+                        padding: 25px 20px 10px;
+                        transition: $tr;
+                        z-index: 9999;
+                        transform: scaleY(0);
+                        transform-origin: top;
+
+                        li {
+                            .nav_head {
+                                h3 {
+                                    @include fs($h, 14px, 600, $ff1);
+                                    text-transform: uppercase;
+                                    margin-bottom: 10px;
+                                }
+
+                                ul {
+                                    li {
+                                        a {
+                                            @include fs($p, 14px, 400, $ff1);
+                                            margin-bottom: 10px;
+                                            transition: $tr;
+
+                                            &:hover {
+                                                color: $ho;
+                                            }
+
+                                            span {
+                                                font-size: 11px;
+                                                color: #fff;
+                                                text-transform: uppercase;
+                                                padding: 0px 3px;
+                                                background: #1CBCD0;
+                                            }
+
+                                            .s1 {
+                                                background: $ho;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .li2 {
+                    ul {
+                        width: 400px;
+
+                        li {
+                            .nav_head {
+                                .h3 {
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .li3 {
+                    ul {
+                        width: 215px;
+
+                        li {
+                            .nav_head {
+                                ul {
+                                    li {
+                                        width: 100%;
+                                        position: relative;
+
+                                        &:hover {
+                                            >ul {
+                                                visibility: visible;
+                                                opacity: 1;
+                                                left: 90%;
+                                            }
+                                        }
+
+                                        ul {
+                                            visibility: hidden;
+                                            opacity: 0;
+                                            transition: $tr;
+                                            position: absolute;
+                                            top: -10px;
+                                            left: 84%;
+                                            background: #fff;
+                                            padding: 15px 20px 5px;
+                                            box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.75);
+                                        }
+
+                                        a {
+                                            position: relative;
+                                            width: 100%;
+
+                                            &:hover {
+                                                >i {
+                                                    right: 35px;
+                                                }
+                                            }
+
+                                            i {
+                                                position: absolute;
+                                                top: 5px;
+                                                right: 40px;
+                                                transition: $tr;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .li4 {
+                    ul {
+                        width: 215px;
+                    }
+                }
+            }
+        }
+       
+        .mobile_menu{
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 320px;
+            height: 100vh;
+            background: #000;
+            z-index: 99999;
+            transition: all linear .3s;
+            &.out{
+                right: 0;
+                .menu_btn{
+                    left: 10px;
+                }
+                .line3{
+                    display: none;
+                }
+                .line1{
+                    transform: rotate(-45deg);
+                    margin-top: 0px;
+                }
+                .line2{
+                    transform: rotate(45deg);
+                    margin-top: -3px !important;
+                }
+            }
+            .menu_btn{
+                position: absolute;
+                top: 52px;
+                left: -52px;
+                width: 35px;
+                height: 35px;
+                z-index: 9999;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .line{
+                    width: 75%;
+                    height: 3px;
+                    background: #fff;
+                    z-index: 999;
+                    transition: $tr;
+                }
+                .line2{
+                    margin: 5px 0;
+                }
+            }
+        }
+
+        .menu_last {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-left: 8%;
+
+            a {
+                @include fs(#fff, 16px, 600, $ff1);
+                margin-left: 45px;
+                transition: $tr;
+                position: relative;
+
+                i {
+                    font-size: 22px;
+                    position: absolute;
+                    left: -28px;
+                    top: 2px;
+                }
+
+                &:hover {
+                    color: $ho;
+                }
+            }
+        }
+    }
+}
+
+.menu_fix {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: $h;
+    animation: menu 1s;
+}
+
+@keyframes menu {
+    0% {
+        top: -100px;
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+.sticy_icon {
+    text-align: center;
+    position: fixed;
+    top: 25%;
+    right: 2%;
+    width: 55px;
+    height: 250px;
+    background: $h;
+    z-index: 99999;
+    border-radius: 25px;
+
+    a {
+        color: #fff;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        line-height: 45px;
+        text-align: center;
+        transition: $tr;
+        position: relative;
+        margin-top: 3px;
+
+        &:hover {
+            background: linear-gradient(104deg, #1c72dd, #5349ff);
+
+            span {
+                display: block;
+            }
+        }
+
+        .sd {
+            left: -170px;
+        }
+
+        .sd2 {
+            left: -125px;
+        }
+
+        span {
+            position: absolute;
+            left: -112px;
+            border-radius: 5px;
+            top: 0;
+            padding: 0px 15px;
+            background: $h;
+            transition: $tr;
+            display: none;
+            position: absolute;
+
+            &::after {
+                position: absolute;
+                content: '';
+                right: -25px;
+                top: 13px;
+                border-bottom: 10px solid transparent;
+                border-left: 15px solid $h;
+                border-right: 10px solid transparent;
+                border-top: 10px solid transparent;
+                z-index: 9999;
+            }
+        }
+
+        i {
+            font-size: 16px;
+        }
+    }
+}
+
+.up_sign{
+    position: fixed !important;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all linear .3s;
+    .sign_up {
+        transition: $tr;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    
+        form {
+            position: relative;
+    
+            .hide {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 24px;
+                color: $ho;
+                cursor: pointer;
+            }
+            padding: 30px 30px;
+            box-shadow: 1px 2px 14px -1px rgba(0, 0, 0, 0.75);
+            width: 510px;
+            border-radius: 5px;
+            background: #fff;
+    
+            h3 {
+                position: relative;
+                text-align: center;
+                margin-bottom: 40px;
+    
+                a {
+                    @include fs($h, 18px, 700, $ff1);
+                    text-transform: uppercase;
+                }
+    
+                &::after {
+                    position: absolute;
+                    content: '';
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40%;
+                    height: 2px;
+                    background: $ho;
+                }
+            }
+    
+            p {
+                @include fs($p, 14px, 400, $ff1);
+                margin-bottom: 7px;
+                line-height: 24px;
+    
+                a {
+                    color: $ho;
+                    transition: $tr;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+    
+            input {
+                width: 100%;
+                height: 45px;
+                border-radius: 3px;
+    
+                &:focus {
+                    outline: 0;
+                }
+    
+                border: 1px solid #6666664d;
+                margin-bottom: 20px;
+                padding-left: 20px;
+            }
+    
+            .type1 {
+                margin-top: 20px;
+            }
+    
+            .input {
+                #customer {
+                    width: 15px;
+                    height: 15px;
+                    margin-bottom: 0;
+                    cursor: pointer;
+                    margin-bottom: 7px;
+                    border: 0;
+                }
+    
+                #seller {
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                }
+    
+                label {
+                    cursor: pointer;
+                    @include fs($p, 14px, 400, $ff1);
+                    margin-left: 5px;
+                }
+            }
+    
+            .check {
+                margin-top: 20px;
+    
+                #check2 {
+                    width: 15px;
+                    height: 15px;
+                    margin-bottom: 0;
+                    margin-right: 5px;
+                    cursor: pointer;
+                }
+    
+                label {
+                    cursor: pointer;
+                    @include fs($p, 14px, 400, $ff1);
+    
+                    a {
+                        color: $ho;
+                        transition: $tr;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+    
+            button {
+                @include fs(#fff, 16px, 600, $ff1);
+                text-transform: uppercase;
+                border: 0;
+                background: $h;
+                transition: $tr;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 40%;
+                margin-left: 30%;
+                text-align: center;
+                margin-top: 25px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                margin-bottom: 30px;
+    
+                &:hover {
+                    &:after {
+                        width: 0;
+                        padding-top: 0;
+                    }
+                }
+    
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    padding-top: 150%;
+                    width: 150%;
+                    background: #f14242;
+                    z-index: -1;
+                    transition: all linear 0.3s;
+                }
+    
+                &:focus {
+                    outline: 0;
+                }
+            }
+    
+            .form_icon {
+                text-align: center;
+                margin-top: 20px;
+    
+                .a2 {
+                    color: #00adef;
+                    border: 1px solid #00adef;
+    
+                    &:hover {
+                        background: #00adef;
+                    }
+                }
+    
+                .a3 {
+                    color: #dd4b39;
+                    border: 1px solid #dd4b39;
+    
+                    &:hover {
+                        background: #dd4b39;
+                    }
+                }
+    
+                a {
+                    color: #1b4f9b;
+                    font-size: 14px;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                    border: 1px solid #1b4f9b;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                    transition: all linear 0.3s;
+    
+                    &:hover {
+                        color: #fff;
+                        background: #1b4f9b;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sign_in {
+    position: fixed !important;
+    transition: $tr;
+    z-index: 999;
+    top: -100%;
+    left: 30%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    form {
+        position: relative;
+
+        .hide2 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: $ho;
+            cursor: pointer;
+        }
+
+        margin: 0 auto;
+        padding: 30px 30px;
+        box-shadow: 1px 2px 14px -1px rgba(0, 0, 0, 0.75);
+        width: 510px;
+        border-radius: 5px;
+        background: #fff;
+
+        h3 {
+            position: relative;
+            text-align: center;
+            margin-bottom: 40px;
+
+            a {
+                @include fs($h, 18px, 700, $ff1);
+                text-transform: uppercase;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40%;
+                height: 2px;
+                background: $ho;
+            }
+        }
+
+        p {
+            @include fs($p, 14px, 400, $ff1);
+            margin-bottom: 7px;
+            line-height: 24px;
+        }
+
+        input {
+            width: 100%;
+            height: 45px;
+            border-radius: 3px;
+
+            &:focus {
+                outline: 0;
+            }
+
+            border: 1px solid #6666664d;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .check {
+            margin-top: 20px;
+
+            #check {
+                width: 15px;
+                height: 15px;
+                margin-bottom: 0;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+            #check2 {
+                width: 15px;
+                height: 15px;
+                margin-bottom: 0;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+
+            label {
+                cursor: pointer;
+                @include fs($p, 14px, 400, $ff1);
+
+                a {
+                    color: $ho;
+                    transition: $tr;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        button {
+            @include fs(#fff, 16px, 600, $ff1);
+            text-transform: uppercase;
+            border: 0;
+            background: $h;
+            transition: $tr;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 40%;
+            margin-left: 30%;
+            text-align: center;
+            margin-top: 25px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            margin-bottom: 30px;
+
+            &:hover {
+                &:after {
+                    width: 0;
+                    padding-top: 0;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                padding-top: 150%;
+                width: 150%;
+                background: #f14242;
+                z-index: -1;
+                transition: all linear 0.3s;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        .form_icon {
+            text-align: center;
+            margin-top: 20px;
+
+            .a2 {
+                color: #00adef;
+                border: 1px solid #00adef;
+
+                &:hover {
+                    background: #00adef;
+                }
+            }
+
+            .a3 {
+                color: #dd4b39;
+                border: 1px solid #dd4b39;
+
+                &:hover {
+                    background: #dd4b39;
+                }
+            }
+
+            a {
+                color: #1b4f9b;
+                font-size: 14px;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                border: 1px solid #1b4f9b;
+                border-radius: 50%;
+                margin-left: 5px;
+                transition: all linear 0.3s;
+
+                &:hover {
+                    color: #fff;
+                    background: #1b4f9b;
+                }
+            }
+        }
+    }
+}
+
+.chart {
+    transition: all linear .3s;
+    position: fixed;
+    z-index: 9999;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    right: -100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    h3 {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #6666664d;
+
+        span {
+            @include fs($h, 18px, 700, $ff1);
+            text-transform: uppercase;
+        }
+
+        a {
+            @include fs($p, 15px, 700, $ff1);
+            transition: $tr;
+            margin-left: 94px;
+
+            &:hover {
+                color: $ho;
+            }
+        }
+    }
+
+    p {
+        @include fs($p, 14px, 600, $ff1);
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+
+/* ============= preloader css ============ */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: #000;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*===============================
+      header area end
+===============================*/

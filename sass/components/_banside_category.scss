@@ -1,0 +1,61 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*  ==============================================================
+                Banner with Sidebar Category Part Start Here
+================================================================ */
+
+
+#banside_category {
+    .container {
+        .category_wrap {
+
+            padding: 50px 0;
+            border-bottom: 2px solid $line;
+            .cats_item {
+                text-align: center;
+                padding: 0 12px;
+
+                &:hover {
+                    a{
+                        color: $bl_hov;
+                    }
+                    .cat_imge {
+                        
+                        a {
+                            transform: scale(1.1);
+                            img{
+                                box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.35);
+                            }
+                        }
+                    }
+                }
+
+                .cat_imge {
+                    a {
+                        img{
+                            border-radius: 50%;
+                            transition: all linear 0.2s;
+                        }
+                        transition: all linear 0.2s;
+                    }
+                }
+
+                a {
+                    @include fs($h, 1em, 700, $ff1);
+                    margin-top: 15px;
+                }
+
+            }
+        }
+    }
+}
+.owl-carousel {
+	/* display: none; */
+	width: 100%;
+	z-index: 1;
+}
+
+/*  ==============================================================
+                Banner with Sidebar Category Part End Here
+ ================================================================ */

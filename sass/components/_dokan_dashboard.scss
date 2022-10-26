@@ -1,0 +1,172 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      dokan dashboard area start
+===============================*/
+#dashboard{
+    .container{
+        .my_acc{
+            padding: 60px 0;
+        }
+
+        .fff{
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #afaeae;
+        }
+
+        .filter_item{
+            a{
+                color: #333;
+                font-size: 13px;
+                font-weight: 400;
+                font-family: var($ff1);
+    
+                &:hover{
+                    opacity: 1;
+                    color: inherit;
+                }
+            }
+    
+            span{
+                i{
+                    color: #333;
+                    font-size: 13px;
+                }
+            }
+
+            span.ak{
+                color: #333;
+                font-size: 13px;
+                font-weight: 400;
+                font-family: var($ff1);
+            }
+        }
+
+
+        .reg_form{
+            padding: 70px;
+            box-shadow: 1px 1px 4px #000;
+            border-radius: 5px;
+
+            ul.form_sin{
+                justify-content: space-around;
+                border-bottom: 1px solid #000;
+
+                li{
+                    color: #333;
+                    font-size: 16px;
+                    padding-bottom: 5px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+
+                }
+
+                li.lgin{
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        left: -70px;
+                        bottom: -1px;
+                        width: 335%;
+                        height: 2px;
+                        background: blue;
+                    }
+                }
+
+              
+            }
+
+
+            .lbl{
+                padding-top: 25px;
+            }
+
+            input{
+                display: block;
+                height: 40px;
+                width: 100%;
+                margin-top: 10px;
+            }
+            
+
+            input.chk{
+                display: inline;
+                height: 25px;
+                width: 25px;
+                margin-top: 20px;
+                margin-right: 10px;
+            }
+
+
+            a.lst_pss{
+                display: inline;
+                color: #9e3434;
+                font-size: 13px;
+                margin-left: 125px;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            button{
+                margin-top: 40px;
+                height: 40px;
+                color: #fff;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 700;
+                width: 100%;
+                background: #6b6bda;
+                border: 1px solid #6b6bda;
+                transition: all linear .3s;
+
+                &:hover{
+                    background: #5a5aca;
+                    border-color: #5a5aca;
+                }
+            }
+
+            p{
+                margin: 20px 0;
+                text-align: center;
+
+            }
+
+            ul.form_icon{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+
+                li{
+                    height: 35px;
+                    width: 35px;
+                    border: 1px solid #333;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin-right: 20px;
+                    line-height: 35px;
+                    cursor: pointer;
+                    background: transparent;
+                    transition: all linear .3s;
+
+                    &:hover{
+                        background: #5a5aca;
+                        color: #fff;
+                        border-color: #5a5aca;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}
+/*===============================
+      dokan dashboard area end
+===============================*/

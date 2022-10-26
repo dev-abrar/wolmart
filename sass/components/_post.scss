@@ -1,0 +1,305 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*===============================
+      post area start
+===============================*/
+#post {
+    .post_head {
+        padding-top: 78px;
+        padding-bottom: 78px;
+
+        h3 {
+            @include fs($h, 34px, 700, $ff1);
+        }
+    }
+
+    .el_row{
+        .el_col{
+            width: 18.4%;
+            padding: 30px 10px;
+            background: #fff;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2rem 3rem rgba(0,0,0,0.05),0 0 5px rgba(0,0,0,0.05);
+            transition: transform .3s;
+            &:hover{
+                transform: scale(1.3);
+            }
+            .svg{
+                color: $h;
+                fill: $h;
+            }
+            h4{
+                a{
+                    @include fs($h, 16px, 600, $ff1);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .post_wrap {
+        background: $wh;
+
+        h4 {
+            @include fs($h, 13px, 400, $ff1);
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            i {
+                color: $p;
+                margin: 0 5px;
+                font-size: 11px;
+            }
+
+            a {
+                color: $p;
+                transition: $tr;
+
+                &:hover {
+                    color: $h;
+                }
+            }
+        }
+
+        .p_post {
+            .p_l_row {
+                margin-bottom: 60px;
+
+                .p_l_img {
+                    overflow: hidden;
+                    border-radius: 5px;
+
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    img {
+                        transition: $tr;
+                    }
+                }
+
+                .p_l_text {
+                    h3 {
+                        a {
+                            @include fs($h, 22px, 600, $ff1);
+                            margin-bottom: 15px;
+                            transition: $tr;
+                            margin-top: 60px;
+
+                            &:hover {
+                                color: $ho
+                            }
+                        }
+                    }
+
+                    p {
+                        @include fs($p, 14px, 400, $ff1);
+                        line-height: 24px;
+                        margin-bottom: 15px;
+
+                        a {
+                            color: $ho;
+                            transition: $tr;
+
+                            &:hover {
+                                color: $h;
+                            }
+                        }
+                    }
+
+                    span {
+                        @include fs($p, 14px, 400, $ff1);
+
+                        .sa {
+                            font-weight: 400;
+                        }
+
+                        a {
+                            color: $h;
+                            transition: $tr;
+                            margin: 0 5px;
+                            font-size: 16px;
+                            font-weight: 500;
+
+                            i {
+                                margin-right: 5px;
+                            }
+
+                            &:hover {
+                                color: $ho;
+
+                                span {
+                                    color: $ho;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .p_right {
+                .p_search {
+                    width: 100%;
+                    border: 1px solid #eee;
+                    border-radius: 5px;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 20px;
+                    margin-bottom: 40px;
+
+                    input {
+                        border: 0;
+                        width: 250px;
+
+                        &:focus {
+                            outline: 0;
+                            @include fs(#999, 13px, 400, $ff1);
+                        }
+                    }
+
+                    button {
+                        background: transparent;
+                        border: 0;
+                        font-size: 18px;
+                        color: #999;
+                        transition: $tr;
+
+                        &:hover {
+                            color: $ho;
+                        }
+                    }
+                }
+               
+                .p_r_top {
+                    margin-bottom: 10px;
+
+                    h3 {
+                        @include fs($h, 18px, 600, $ff1);
+                        margin-bottom: 30px;
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                @include fs($h, 14px, 400, $ff1);
+                                margin-bottom: 20px;
+                                transition: $tr;
+
+                                &:hover {
+                                    color: $ho;
+                                }
+                            }
+                        }
+                    }
+
+                    .p_r_wrap {
+                        .owl-nav {
+                            position: relative;
+
+                            .owl-prev {
+                                color: #666666a3;
+                                position: absolute;
+                                right: 45px;
+                                top: -415px;
+                                background: transparent;
+                                font-size: 35px;
+                                transition: $tr;
+
+                                &:hover {
+                                    color: $ho;
+                                }
+                            }
+
+                            .owl-next {
+                                color: #666666a3;
+                                position: absolute;
+                                right: 25px;
+                                top: -415px;
+                                background: transparent;
+                                font-size: 35px;
+                                transition: $tr;
+
+                                &:hover {
+                                    color: $ho;
+                                }
+                            }
+                        }
+
+                        .p_r_item {
+                            .p_r_img {
+                                overflow: hidden;
+                                border-radius: 5px;
+                            }
+
+                            .p_r_text {
+                                h5 {
+                                    a {
+                                        @include fs($p, 13px, 400, $ff1);
+                                        transition: $tr;
+                                        margin-top: 12px;
+                                        margin-bottom: 10px;
+
+                                        &:hover {
+                                            color: $ho;
+                                        }
+                                    }
+                                }
+
+                                h3 {
+                                    a {
+                                        @include fs($h, 14px, 500, $ff1);
+                                        transition: $tr;
+                                        line-height: 24px;
+
+                                        &:hover {
+                                            color: $ho;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        @include fs($p, 14px, 400, $ff1);
+                        line-height: 24px;
+                        margin-bottom: 20px;
+                    }
+
+                    h4 {
+                        @include fs(#fff, 15px, 600, $ff1);
+                        background: $ho;
+                        border-radius: 5px;
+                    }
+
+                    .c_row {
+                        margin-top: 20px;
+
+                        .c_col {
+                            h5 {
+                                @include fs($h, 14px, 600, $ff1);
+                                text-align: center
+                            }
+
+                            .cu {
+                                .cl {
+                                    @include fs($p, 14px, 400, $ff1);
+                                    margin-top: 20px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*===============================
+      post area end
+===============================*/
